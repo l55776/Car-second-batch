@@ -1,0 +1,8 @@
+<template name="entry">
+    <import src="/towxml/renderTemplate.wxml"></import>
+    <view class="h2w h2w-{{theme}}">
+        <view class="h2w__main">
+            <template is="m0" data="{{item:item}}" wx:for="{{child}}" wx:key="{{index}}"></template>
+        </view>
+    </view>
+</template>

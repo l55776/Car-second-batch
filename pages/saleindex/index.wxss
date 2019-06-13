@@ -1,0 +1,98 @@
+.banner {
+    height: 375rpx;
+    width: 100%;
+    display: block;
+}
+
+.sell_btn {
+    height: 88rpx;
+    line-height: 88rpx;
+    width: 690rpx;
+    text-align: center;
+    top: 455rpx;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: #ff6600;
+    border-radius: 2rpx;
+    margin: 0 auto;
+    font-size: 28rpx;
+    color: #FFFFFF;
+}
+
+.zixun_btn {
+    height: 84rpx;
+    line-height: 84rpx;
+    text-align: center;
+    top: 570rpx;
+    position: absolute;
+    border-radius: 2rpx;
+    width: 335rpx;
+    left: 30rpx;
+    font-size: 28rpx;
+    border: 2rpx solid #ff6600;
+    color: #ff6600;
+}
+
+.zixun_gujia {
+    height: 84rpx;
+    line-height: 84rpx;
+    text-align: center;
+    top: 570rpx;
+    position: absolute;
+    border-radius: 2rpx;
+    width: 335rpx;
+    left: 385rpx;
+    font-size: 28rpx;
+    border: 2rpx solid #ff6600;
+    color: #ff6600;
+}
+
+.mengceng {
+    top: 0rpx;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+}
+
+.mengceng_modle {
+    width: 500rpx;
+    height: 253rpx;
+    background: #fff;
+    border-radius: 20rpx;
+}
+
+.mengceng_modle_title {
+    height: 165rpx;
+    width: 100%;
+    font-size: 30rpx;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    line-height: 165rpx;
+    border-bottom: 1rpx solid #f9f9f9;
+}
+
+.mengceng_modle_btn {
+    height: 87rpx;
+    width: 249rpx;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 87rpx;
+    color: #555555;
+    display: inline-block;
+    border-right: 1rpx solid #f9f9f9;
+}
+
+.mengceng_modle_btn_sec {
+    color: #ff6600;
+    border-right: 0;
+}
+
+.guanggao_view {
+    margin-top: 350rpx;
+}

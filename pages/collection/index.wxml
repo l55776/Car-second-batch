@@ -1,0 +1,19 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="modle_border" wx:if="{{carslist.length>0}}">
+    <view bindtap="{{item.status<3?'':item.delete_time>0?'':'retocards'}}" class="modle" data-id="{{item.id}}" wx:for="{{carslist}}" wx:key="carslist">
+        <image class="modle_img" src="{{item.img_patch}}"></image>
+        <view class="{{item.status<3?'mengceng1':item.delete_time>0?'mengceng1':'nones'}}">{{item.status<3?'已下架':item.delete_time>0?'已删除':''}}</view>
+        <view class="modle_name">{{item.name}} {{item.km}}万公里 {{item.agelimit<1?'准新车':item.agelimit+'年车'}}</view>
+        <view class="modle_chexing">车型：{{item.class_name}}
+      <view bindtap="delcollection" class="modle_chexing_btn" data-id="{{item.id}}" data-index="{{index}}">删除</view>
+        </view>
+        <view class="modle_price">{{item.price}}万</view>
+    </view>
+</view>
+<block wx:else>
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:'暂无收藏数据'}}"></template>
+    </view>
+</block>

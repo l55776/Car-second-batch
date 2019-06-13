@@ -1,0 +1,16 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="modle" wx:if="{{list.length>0}}" wx:for="{{list}}">
+    <image class="modle_img" src="{{item.head_image}}"></image>
+    <view class="modle_title">{{item.nickname}}</view>
+    <view class="modle_time">推广时间：{{item.create_time}}</view>
+    <navigator class="choose_view" url="/pages/store/index?uid={{item.uid}}">
+        <view class="modle_btn" data-id="{{item.uid}}">店铺</view>
+    </navigator>
+</view>
+<block wx:if="{{list.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:'暂无查看数据'}}"></template>
+    </view>
+</block>

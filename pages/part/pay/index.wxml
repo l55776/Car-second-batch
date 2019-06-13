@@ -1,0 +1,41 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="top_view">
+    <view>
+        <view class="message_border">收货人：{{name}}
+      <text class="message_border_right">{{tel}}</text>
+        </view>
+        <view bindtap="addressSave" class="dizhi_border">
+            <view class="dizhi_border_img_border">
+                <image class="dizhi_border_img" src="../../image/dingwei_icn.png"></image>
+            </view>
+            <view class="dizhi_border_text">收货地址：{{address}}</view>
+            <view class="dizhi_border_img_border">
+                <image class="dizhi_border_backimg" src="../../image/jiantou_btn.png"></image>
+            </view>
+        </view>
+        <image class="huatiao" src="../../image/border_line.png"></image>
+    </view>
+    <view class="style_view">支付方式
+      <view style="float:right;color:#b2b2b2">微信支付</view>
+    </view>
+</view>
+<view class="modle_border">
+    <view class="modle">
+        <image class="modle_img" mode="aspectFill" src="{{order_line.part_img}}"></image>
+        <view class="modle_title">{{order_line.part_name}}</view>
+        <view class="modle_title_right">x1</view>
+        <view class="modle_title_bottom">¥{{order_line.part_price}}</view>
+    </view>
+    <view class="heji_modle">
+        <view style="float:right">小计：
+        <text style="font-weight: bold;font-size:30rpx;">¥{{order_line.part_price}}</text>
+        </view>
+    </view>
+</view>
+<view class="bottom_nav">
+    <form bindsubmit="pay" reportSubmit="true">
+        <button class="bottom_nav_btn" formType="submit">付款</button>
+    </form>
+    <text style="margin-left:24px;" wx:if="{{kill_status!=1}}">实付款：¥{{order_line.part_price}}</text>
+</view>

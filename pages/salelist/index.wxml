@@ -1,0 +1,32 @@
+<import src="/pages/template/header.wxml" />
+<template is="header" data="{{...headerdata}}" />
+<view class="modle_1_nav">
+  <view bindtap="ActiveClick" class="modle_1_nav_modle {{activeIndex==index?'modle_1_nav_active':''}}" data-index="{{index}}" style="width:{{nav_width}}%" wx:for="{{table}}" wx:key="table">{{item}}
+    <view class="modle_1_nav_modle_border" wx:if="{{activeIndex==index}}"></view>
+  </view>
+</view>
+<view class="modle_border" wx:if="{{carslist.length>0}}" wx:for="{{carslist}}" wx:key="carslist">
+  <view class="modle">
+    <image bindtap="detile" class="modle_img" data-id="{{item.id}}" src="{{item.img_patch}}"></image>
+    <view class="modle_name">
+      <view bindtap="detile" class="modle_name_left" data-id="{{item.id}}">{{item.brand2.name}}</view>
+          <view class="modle_name_right {{item.status==3&&item.audit_type==1?'modle_name_right_active':''}}">
+            {{item.price}}万
+          </view>
+      </view>
+      <view class="modle_time">{{item.brand3.name}}</view>
+      <view class="modle_btn_view">
+        {{item.status==3?'已上架':'未上架'}}
+        <button bindtap="upcar" class="modle_chexing_btnsc btn_active" data-id="{{item.id}}" wx:if="{{item.status<2}}">编辑</button>
+        <button bindtap="makeshelf" class="modle_chexing_btnsc btn_active" data-id="{{item.id}}" data-index="{{index}}" style="margin-right:20rpx;">{{item.status==3?'下架':'上架'}}</button>
+        <button bindtap="delcar" class="modle_chexing_btnsc" data-id="{{item.id}}" data-index="{{index}}" style="margin-right:20rpx;">删除</button>
+        <button bindtap="upthiscar" class="modle_chexing_btnsc btn_active" data-id="{{item.id}}" data-index="{{index}}" style="margin-right:20rpx;">置顶</button>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{carslist.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+      <template is="title" data="{{title:'暂无查看数据'}}"></template>
+    </view>
+  </block>

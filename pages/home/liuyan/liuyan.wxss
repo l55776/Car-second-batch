@@ -1,0 +1,100 @@
+page {
+    background: #f9f9f9;
+}
+
+.modle_border {
+    width: 690rpx;
+    margin-top: 60rpx;
+    margin-left: 30rpx;
+    border-left: 1rpx solid #c6c6c6;
+}
+
+.modle_view {
+    position: relative;
+    width: 590rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    z-index: 10;
+    margin-top: 40rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    margin-left: 40rpx;
+    background: #FFFFFF;
+    border: 1rpx solid #cccccc;
+    border-radius: 20rpx;
+}
+
+.modle_view_title {
+    font-size: 24rpx;
+    width: 100%;
+    color: #9295A8;
+}
+
+.modle_view_name {
+    font-size: 24rpx;
+    width: 100%;
+    margin-top: 10rpx;
+    color: #9295A8;
+}
+
+.modle_view_text {
+    font-size: 28rpx;
+    color: #333333;
+    overflow: hidden;
+    margin-top: 10rpx;
+    width: 100%;
+}
+
+.modle_view_text_overflow {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.modle_view_more {
+    width: 100%;
+    margin-top: 25rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #ff6600;
+}
+
+.modle_view_more_img {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+    margin-top: -10rpx;
+}
+
+.modle_jiantou {
+    height: 19rpx;
+    width: 19rpx;
+    margin-left: -38.5rpx;
+    margin-top: 6rpx;
+    border-radius: 5rpx;
+    background: #fff;
+    border-top: 1rpx solid #b2b2b2;
+    border-left: 1rpx solid #b2b2b2;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+.modle_dian {
+    position: absolute;
+    height: 15rpx;
+    width: 15rpx;
+    background: #c6c6c6;
+    border-radius: 100%;
+    margin-left: -78rpx;
+    margin-top: 8rpx;
+}
+
+.zhezhao {
+    width: 30rpx;
+    height: 50rpx;
+    background: #f9f9f9;
+    position: absolute;
+    top: 40rpx;
+    left: 12rpx;
+}

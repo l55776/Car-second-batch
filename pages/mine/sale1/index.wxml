@@ -1,0 +1,158 @@
+<import src="/pages/template/header.wxml" />
+<template is="header" data="{{...headerdata}}" />
+<block wx:if="{{!is_member}}">
+    <view class="mine_box">
+        <view class="mine_banner">
+            <image src="../../image/mine_banner.jpg"/>
+        </view>
+        <view class="mine_msg">
+            <view class="mine_tou">
+                <image bindtap="goset" src="{{detail.user.head_image?detail.user.head_image:memberInfo.avatar}}" mode="aspectFill"></image>
+            </view>
+            <view class="text_msg">
+                <view class="title">{{vipData.vipLv}}</view>
+                <view class="small">{{detail.user.nickname}}</view>
+            </view>
+            <view class="text_time">
+                <text class="">{{vip_words}}</text>
+            </view>
+            <view class="text_vip" bindtap="xufei">
+                <text>立即加入</text>
+            </view>
+            <view class="text_ps">
+                <text>请添加客服微信chemiaopi</text>
+            </view>
+        </view>
+        <!-- <view class="banner_modle_down">
+            <navigator class="banner_modle_down_modle" url="/pages/collection/index">
+                <view class="banner_modle_down_modle_top">{{detail.stotal?detail.stotal:0}}</view>
+                <view class="banner_modle_down_modle_down">收藏</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/fensi/fensi?type=2">
+                <view class="banner_modle_down_modle_top">{{detail.gtotal?detail.gtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">关注</view>
+            </navigator> 
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/salelist/index">
+                <view class="banner_modle_down_modle_top">{{detail.fbtotal?detail.fbtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">发布</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/fensi/fensi?type=1">
+                <view class="banner_modle_down_modle_top">{{detail.jifen?detail.jifen:0}}</view>
+                <view class="banner_modle_down_modle_down">积分</view>
+            </navigator>
+        </view> -->
+    </view>
+</block>
+
+<block wx:else>
+    <view class="mine_box">
+        <view class="mine_banner">
+            <image src="../../image/mine_banner.jpg"/>
+        </view>
+        <view class="mine_msg">
+            <view class="mine_tou">
+                <image bindtap="goset" src="{{detail.user.head_image?detail.user.head_image:memberInfo.avatar}}" mode="aspectFill"></image>
+            </view>
+            <view class="text_msg">
+                <view class="title">{{vipData.vipLv}}</view>
+                <view class="small">{{detail.user.nickname}}</view>
+            </view>
+            <view class="text_time">
+                <text class="">会员到期:{{detail.user.end_time}}</text>
+            </view>
+            <view class="text_vip" bindtap="xufei">
+                <text>续费会员</text>
+            </view>
+        </view>
+        <!-- <view class="banner_modle_down">
+            <navigator class="banner_modle_down_modle" url="/pages/collection/index">
+                <view class="banner_modle_down_modle_top">{{detail.stotal?detail.stotal:0}}</view>
+                <view class="banner_modle_down_modle_down">收藏</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/fensi/fensi?type=2">
+                <view class="banner_modle_down_modle_top">{{detail.gtotal?detail.gtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">关注</view>
+            </navigator> 
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/salelist/index">
+                <view class="banner_modle_down_modle_top">{{detail.fbtotal?detail.fbtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">发布</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/fensi/fensi?type=1">
+                <view class="banner_modle_down_modle_top">{{detail.jifen?detail1.jifen:0}}</view>
+                <view class="banner_modle_down_modle_down">积分</view>
+            </navigator>
+        </view> -->
+    </view>
+</block>
+<view class="mine_border"></view>
+<view>
+  <view class="banner"></view>
+  <view class="banner_modle">
+    <view class="banner_modle_top">
+      <!-- <image class="banner_modle_top_img" src="{{detail.user.head_image?detail.user.head_image:memberInfo.avatar}}"></image> -->
+      <view class="banner_modle_top_title">{{memberInfo.nickname}}
+
+      </view>
+      <view bindtap="binding" class="banner_modle_top_btn">提现</view>
+    </view>
+    <view class="banner_modle_down">
+      <navigator class="banner_modle_down_modle" url="/pages/mine/yongjinjilu/yongjinjilu">
+        <view class="banner_modle_down_modle_top">{{total.brokerage}}</view>
+        <view class="banner_modle_down_modle_down">总佣金</view>
+      </navigator>
+      <view class="banner_modle_down_border"></view>
+      <navigator class="banner_modle_down_modle" url="/pages/mine/yongjinjilu/yongjinjilu">
+        <view class="banner_modle_down_modle_top">{{total.withdraw}}</view>
+        <view class="banner_modle_down_modle_down">已提现</view>
+      </navigator>
+      <view class="banner_modle_down_border"></view>
+      <navigator class="banner_modle_down_modle" url="/pages/mine/tixian/tixian">
+        <view class="banner_modle_down_modle_top">{{total.brokerage-total.withdraw}}</view>
+        <view class="banner_modle_down_modle_down">可提现</view>
+      </navigator>
+      <view class="banner_modle_down_border"></view>
+      <navigator class="banner_modle_down_modle" url="/pages/mine/fensi/fensi">
+        <view class="banner_modle_down_modle_top">{{total.number}}</view>
+        <view class="banner_modle_down_modle_down">推广人数</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<navigator class="choose_view" style="margin-top:20rpx;" url="/pages/mine/yongjinjilu/yongjinjilu">
+  <view class="choose_view_modle">
+    <image class="choose_view_modle_img" src="/pages/image/yongjin.png"></image>佣金记录
+    <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+    <text class="choose_view_modle_num"></text>
+  </view>
+</navigator>
+<navigator class="choose_view" url="/pages/mine/fensi/fensi">
+  <view class="choose_view_modle">
+    <image class="choose_view_modle_img" src="/pages/image/tuiguang.png"></image>推广记录
+    <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+    <text class="choose_view_modle_num"></text>
+  </view>
+</navigator>
+<navigator class="choose_view" url="/pages/mine/tixianjilu/tixianjilu">
+  <view class="choose_view_modle">
+    <image class="choose_view_modle_img" src="/pages/image/tuiguang.png"></image>提现明细
+    <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+    <text class="choose_view_modle_num"></text>
+  </view>
+</navigator>
+<view bindtap="retopublicity" class="choose_view">
+  <view class="choose_view_modle">
+    <image class="choose_view_modle_img" src="/pages/image/fcode.png"></image>我的推广码
+    <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+  </view>
+</view>
+<view class="btm_nav"></view>
+<!-- <view class='ad-container'>
+  <image src='https://www.chemiaopi.com/attachment/images/5/2019/07/pvllELb4535jOB8BOb37iG2vZE6ooL.jpg' />
+</view> -->
+<image class="banner1" mode="scaleToFill" src="{{saleinfo['sale_logo']}}"></image>

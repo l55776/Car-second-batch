@@ -1,0 +1,18 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="modle" wx:if="{{list.length>0}}" wx:for="{{list}}">
+    <view class="modle_top">{{item.detail}}
+    <text class="modle_top_right">-{{item.account}}元</text>
+    </view>
+    <view class="modle_btm">{{item.create_time}}
+    <text class="modle_top_right jujue" wx:if="{{item.status==2}}">已拒绝</text>
+        <text class="modle_top_right tixian" wx:if="{{item.status==1}}">已提现</text>
+        <text class="modle_top_right shenhe" wx:if="{{item.status==0}}">审核中</text>
+    </view>
+</view>
+<block wx:if="{{list.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:'暂无查看数据'}}"></template>
+    </view>
+</block>

@@ -1,0 +1,70 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<form bindsubmit="fromsubmit">
+    <view class="modle">
+    店铺名称：
+    <input class="modle_right" name="nickname" placeholder="请输入店铺名称" placeholderStyle="color: #9295A8;" type="text" value="{{detail.nickname}}"></input>
+    </view>
+    <view bindtap="selectbrand" class="modle">
+    咨询电话：
+
+    <!-- <button bindgetphonenumber="getPhoneNumber" class="modle_btn" openType="getPhoneNumber">电话授权</button> -->
+        <!-- <input bindblur="checkPhone" class="modle_right" maxlength="11" name="phone" placeholder="请输入咨询电话" placeholderStyle="color: #9295A8;" type="number" value="{{phone}}"></input> -->
+        <input bindblur="checkPhone" class="modle_right" maxlength="11" name="phone" placeholder="请输入咨询电话" placeholderStyle="color: #9295A8;" type="number" value="19871834741" disabled></input>
+    </view>
+    <view class="modle">
+    看车地址：
+        <!-- <button bindtap="tomap" class="modle_btn">获取位置</button> -->
+        <input class="modle_right" name="address" placeholder="请输入试车地址" placeholderStyle="color: #9295A8;" type="text" value="{{address?address:''}}"></input>
+    </view>
+    <view wx:if="{{detail.is_vip==1}}">
+        <view class="modle" style="border-bottom:0">
+    店铺logo
+    <button bindtap="addlogo" class="modle_btn"> 编辑logo</button>
+        </view>
+        <view>
+            <view class="shangchuan_view_index" wx:if="{{head_image}}">
+                <image class="shangchuan_view_index" src="{{head_image}}"></image>
+            </view>
+            <view bindtap="addlogo" class="shangchuan_view_index" wx:else>
+                <image class="shangchuan_view_index" src="/pages/image/tianjiantp_btn.png" style="border-radius: 0;"></image>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{detail.is_vip==1}}">
+        <view class="modle" style="border-bottom:0">
+    店铺封面
+    <button bindtap="addimg" class="modle_btn">编辑封面</button>
+        </view>
+        <view>
+            <view class="shangchuan_view" wx:if="{{temp}}">
+                <image class="shangchuan_Img" src="{{temp}}"></image>
+            </view>
+            <view bindtap="addimg" class="shangchuan_view" wx:else>
+                <image class="shangchuan_Img" src="/pages/image/tianjiantp_btn.png"></image>
+            </view>
+                </view>
+            
+        </view>
+       <view>
+       <view class="modle">
+    微信号：
+    <input class="modle_right" name="qr_code" placeholder="请输入微信号" placeholderStyle="color: #9295A8;" type="text" value="{{detail.qr_code}}"></input>
+    </view>
+        <view class="modle" style="border-bottom:0">
+    微信二维码
+    <button bindtap="addqrcode" class="modle_btn"> 编辑微信二维码</button>
+        </view>
+        <view>
+            <view class="shangchuan_view_index" wx:if="{{qr_img}}">
+                <image class="shangchuan_view_index" src="{{qr_img}}"></image>
+            </view>
+            <view bindtap="addqrcode" class="shangchuan_view_index" wx:else>
+                <image class="shangchuan_view_index" src="/pages/image/tianjiantp_btn.png" style="border-radius: 0;"></image>
+            </view>
+        </view>
+    </view>
+    <button class="bufa_btn" formType="submit">保存</button>
+</form>
+<import src="/pages/alert/index.wxml"></import>
+<template is="alert" data="{{isShow:isShow}}"></template>

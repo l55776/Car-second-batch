@@ -1,0 +1,13 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<form bindsubmit="gosubmit">
+    <view class="modle">
+        <view class="modle_title">提现金额</view>
+        <view class="modle_input_border">
+            <text style="float:left">￥</text>
+            <input class="modle_input" name="withdraw" type="digit"></input>
+        </view>
+        <view class="modle_btm_title">可提现金额 ¥{{detail.balance?detail.balance:0}}</view>
+        <button class="btn" formType="submit">申请提现</button>
+    </view>
+</form>

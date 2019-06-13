@@ -1,0 +1,10 @@
+<view class="header">
+  <text>充值记录</text>
+</view>
+<view wx:for="{{list}}">
+  <view  class="item">
+    <text>充值<text class="num">{{item.order_money}}</text>，奖励积分<text class="num">{{item.integral}}</text></text>
+    <text class="time">{{item.create_time}}</text>
+  </view>
+  <view class="heng"></view>
+</view>

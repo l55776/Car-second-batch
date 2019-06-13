@@ -1,0 +1,180 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wx6e025aa7ad26d8c1",
+	"projectname": "%E4%BA%8C%E6%89%8B%E6%B1%BD%E8%BD%A6812-1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": -1,
+					"name": "海报",
+					"pathName": "pages/mine/publicity/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "凭证列表",
+					"pathName": "pages/mine/payorder/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "品牌",
+					"pathName": "pages/selectscards/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布",
+					"pathName": "pages/sale/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "求购",
+					"pathName": "pages/gujia/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "车辆信息页面",
+					"pathName": "pages/home/carMessage/carMessage",
+					"query": "id=21",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "定金托管页面",
+					"pathName": "pages/deposit/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推广列表",
+					"pathName": "pages/mine/sale/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布",
+					"pathName": "pages/sale/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index",
+					"pathName": "pages/mine/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/mine/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/integral/integral",
+					"pathName": "pages/integral/integral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布页面",
+					"pathName": "pages/salelist/index",
+					"query": "id=21",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/salelist/index",
+					"pathName": "pages/salelist/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/selectscards/index",
+					"pathName": "pages/selectscards/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/searchShop/searchShop",
+					"pathName": "pages/home/searchShop/searchShop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/saledetail/index",
+					"pathName": "pages/saledetail/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

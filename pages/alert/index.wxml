@@ -1,0 +1,13 @@
+<template name="alert">
+    <view class="wx_dialog_container" hidden="{{!isShow}}">
+        <view class="wx-alert-mask"></view>
+        <view class="wx-alert-dialog">
+            <view class="wx-alert-dialog-title">尊敬的用户</view>
+            <view class="wx-alert-dialog-content">尚未获取到您的用户信息，较多功能无法体验，请允许获取用户信息</view>
+            <view class="wx-alert-dialog-footer">
+                <button bindtap="hideDialog" class="wx-alert-dialog-btn">拒绝</button>
+                <button bindgetuserinfo="updateUserInfo" class="wx-alert-dialog-btn" openType="getUserInfo">允许</button>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,68 @@
+page {
+    background: #f4f4f4;
+}
+
+.nav_border {
+    background: #fff;
+}
+
+.nav {
+    padding: 30rpx 0;
+    width: 690rpx;
+    height: 72rpx;
+    font-size: 34rpx;
+    color: #333333;
+    font-weight: bold;
+    line-height: 72rpx;
+    margin: 0 auto;
+    border-bottom: 1rpx solid rgba(0,0,0,0.10);
+}
+
+.nav_img {
+    height: 72rpx;
+    width: 72rpx;
+    margin-right: 20rpx;
+    vertical-align: middle;
+    margin-top: -5rpx;
+    border-radius: 100%;
+}
+
+.nav_xiugai {
+    font-size: 28rpx;
+    color: #ff6600;
+    font-weight: normal;
+    float: right;
+}
+
+.nav_tishiText {
+    font-size: 24rpx;
+    color: #7A7A7A;
+    text-align: center;
+    margin-top: 60rpx;
+}
+
+.nav_tishiText_color {
+    color: #ff6600;
+}
+
+.nav:last-child {
+    border: none;
+}
+
+.btm_btn {
+    height: 72rpx;
+    left: 0rpx;
+    right: 0rpx;
+    margin: 0 auto;
+    line-height: 72rpx;
+    width: 630rpx;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    background: #ff6600;
+    border-radius: 20rpx;
+}
+
+button::after {
+    border: none;
+}

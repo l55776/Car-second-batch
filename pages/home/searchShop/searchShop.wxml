@@ -1,0 +1,37 @@
+  <!-- 头部 -->
+<view class="topBox" style="padding-top:{{headerdata.top}}px">
+  <text>二手汽车</text>
+</view>
+<view class="empty_custom" style="padding-top:{{headerdata.top}}px"></view>
+<!-- 头部 -->
+<form bindsubmit="formSubmit">
+    <view class="serch_view">
+        <view class="serch_border">
+            <image class="serch_border_img" src="../../image/sousuo_btn.png"></image>
+            <input bindinput="bindKeyInput" class="serch_border_text" focus="{{true}}" name="name" placeholder="请输入关键字进行搜索" placeholderStyle="font-size: 24rpx;color: #B2B2B2;" type="text" value="{{inputVal}}"></input>
+        </view>
+        <button class="serch_border_btn btn_active" formType="submit">搜索</button>
+    </view>
+</form>
+<view class="mohu_border_view" wx:if="{{res.length>0}}">
+    <view class="mohu_border">
+        <view class="mohu_border_modle mohu_border_modle_first">搜索{{inputVal}}店铺</view>
+        <form bindsubmit="shop_id" reportSubmit="true" wx:for="{{res}}">
+            <input hidden="true" name="shopid" value="{{item.id}}"></input>
+            <button class="mohu_border_modle" formType="submit">{{item.unickname}}</button>
+        </form>
+    </view>
+</view>
+<view class="serch_nav"></view>
+<view class="biaoqian_border_all" wx:if="{{keywordArr.length>0}}">
+    <view class="biaoqian_modle">
+        <view class="biaoqian_title">历史搜索
+            <view bindtap="del" class="biaoqian_title_right">删除</view>
+        </view>
+    </view>
+    <view class="biaoqian_border">
+        <view bindtap="searchPage" class="biaoqian" data-name="{{item}}" wx:for="{{keywordArr}}">
+                {{item}}
+            </view>
+    </view>
+</view>

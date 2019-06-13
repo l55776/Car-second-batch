@@ -1,0 +1,14 @@
+<template name="header">
+  <!-- 头部 -->
+<view class="topBox" style="padding-top:{{top}}px">
+  <text>车秒批</text>
+  <view class='serchBox'>
+    <view class="serch_border">
+        <image class="serch_border_img" src="/pages/image/sousuo_btn.png"></image>
+        <view bindtap="search" class="serch_border_text" placeholder="" placeholderStyle="font-size: 24rpx;color: #B2B2B2;" type="text"></view>
+    </view> 
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{top}}px"></view>
+<!-- 头部 -->
+</template>

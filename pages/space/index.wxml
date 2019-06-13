@@ -1,0 +1,6 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<import src="/pages/data_null/index.wxml"></import>
+<view>
+    <template is="title" data="{{title:'暂无查看数据'}}"></template>
+</view>

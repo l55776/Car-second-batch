@@ -1,0 +1,33 @@
+.modle {
+    width: 690rpx;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #f9f9f9;
+    padding: 30rpx 0;
+}
+
+.modle_top {
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.modle_top_right {
+    float: right;
+}
+
+.modle_btm {
+    font-size: 24rpx;
+    margin-top: 10rpx;
+    color: #9195A3;
+}
+
+.jujue {
+    color: #F75F5F;
+}
+
+.shenhe {
+    color: #FB9145;
+}
+
+.tixian {
+    color: #9195A3;
+}

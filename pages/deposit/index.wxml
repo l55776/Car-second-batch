@@ -1,0 +1,5 @@
+<!-- <import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/> -->
+<view class='ad-container'>
+  <image src='{{deposit_img}}' />
+</view>

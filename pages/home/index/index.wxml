@@ -1,0 +1,53 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view wx:if="{{carList.length>0}}">
+    <view class="shop_border">
+        <view class="shop_modle" hidden="{{plate_type!=1}}" wx:for="{{carList}}" wx:for-index="indexs" wx:key="6">
+            <!-- <view class="shop_modle_headImg_view">
+                <image bindtap="store" class="shop_modle_headImg" data-uid="{{item.uid}}" src="{{item.head_image.head_image}}"></image>
+                <view class="shop_modle_headImg_view_btmTextView" wx:if="{{item.top_status}}">推荐</view>
+            </view> -->
+            <view class="shop_modle_right">
+                <view bindtap="detile" data-id="{{item.id}}">
+<!--                    <view class="shop_modle_right_title">
+                        <text class="shop_modle_right_title_name">{{item.head_image.nickname?item.head_image.nickname:item.username}}</text>
+                        <text class="ziying" wx:if="{{item.uid==0}}">自营</text>
+                        <text class="shop_modle_right_title_right">{{item.price}}万</text>
+                    </view> -->
+        <view class="shop_modle_message">
+          <text style="font-weight:normal"></text> 【{{item.brand_name}}】{{item.km}}公里 {{item.agelimit==0?'全新车':'车龄 '+item.agelimit+'年'}}
+</view>
+                    <view class="shop_modle_area">
+                        <text class="shop_modle_area_dian">·</text>{{item.timestr}}·{{item.caraddress}}</view>
+                </view>
+                <scroll-view class="solid_modle_scroll" scrollX="true">
+                    <view class="solid_modle_scroll_modle" wx:for="{{item['image']}}">
+                        <image bindtap="previewImage" class="solid_modle_scroll_modle_img" data-index="{{index}}" data-src="{{item.img_patch}}" src="{{item.img_patch}}"></image>
+                    </view>
+                </scroll-view>
+                <view class="shop_modle_num">浏览 {{item.browse}}</view>
+            </view>
+        </view>
+        <view class="btm_nav"></view>
+    </view>
+</view>
+<view class="modle" hidden="{{plate_type!=2}}" wx:for="{{carList}}" wx:for-index="indexs" wx:key="6">
+    <view class="tuijian" wx:if="{{item['top_status']}}">推荐</view>
+    <image bindtap="detile" class="modle_img" data-id="{{item.id}}" mode="aspectFill" src="{{item.carimg}}"></image>
+    <view bindtap="detile" class="message_border" data-id="{{item.id}}">
+        <view class="modle_name">
+            <view class="ziying" wx:if="{{item.is_vip==1}}">认证车商</view>
+            <view class="ziying" wx:if="{{item.uid==0}}">自营</view>
+            {{item.name}} {{item.agelimit==0?'全新车':'车龄 '+item.agelimit+'年'}}  {{item.exhaust}} {{item.gearbox==0?'手自一体':''}}{{item.gearbox==2?'手动档':''}}{{item.gearbox==2?'手自一体':''}}{{item.gearbox==2?'自动档':''}}</view>
+        <view class="modle_chexing"> {{item.year}}  | {{item.km}}万公里
+                </view>
+        <view class="modle_price">{{item.price}}万
+        </view>
+    </view>
+</view>
+<block wx:if="{{carList.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:title}}"></template>
+    </view>
+</block>

@@ -1,0 +1,6 @@
+<template name="title">
+    <view class="zanwushuju_border">
+        <image class="zanwushuju_border_img" src="/pages/image/none_message.png"></image>
+        <view class="zanwushuju_border_title">{{title}}</view>
+    </view>
+</template>

@@ -1,0 +1,226 @@
+<import src="/pages/template/header.wxml" />
+
+<template is="header" data="{{...headerdata}}" />
+<swiper autoplay="{{autoplay}}" bindchange="changblock" class="solid_border" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}">
+  <swiper-item wx:for="{{imgUrls}}">
+    <image bindtap="imgs" class="solid_border" data-index="{{index}}" data-src="{{item}}" mode="aspectFill" src="{{item}}"></image>
+  </swiper-item>
+</swiper>
+<view class="index">
+  <text style="padding:1rpx 15rpx;background:rgba(0,0,0,0.4);border-radius: 100rpx;">浏览{{carInfo.browse}}次</text>
+  <text style="padding:1rpx 22rpx;background:rgba(0,0,0,0.4);border-radius: 100rpx;float:right;display:block;line-height: 30rpx;margin-top:10rpx;">{{swiperCurrent}}/{{imgUrls.length}}</text>
+</view>
+<view class="car_title">
+  <text class="car_title1" style="font-size:50rpx;font-weight:bold;color:#000">{{carInfo.brand.name}}-{{carInfo.brand2.name}}</text>丨
+  <text style="font-size:30rpx;">{{carInfo.brand3.name}}</text>
+</view>
+
+<view class="car_price">
+  <text>批发价格：</text>
+  <text class="jiage">{{carInfo.price}}万</text>
+  <button bindtap="home" class="index_modle_btn" style="margin-right:30rpx;">返回首页</button>
+</view>
+<!-- 指导价格 -->
+<view class="car_price" style="text-decoration:line-through;">
+  <text>新车指导价格：</text>
+  <text class="jiage">{{carInfo.brand3.guide}}万</text>
+</view>
+<view class="top_nav"></view>
+<!-- <view bindtap="daikuan" class="daikuan_border">
+    <image class="daikuan_border_img" src="../../image/daikuan.png"></image>贷款
+  <view class="daikuan_right">具体方案请咨询销售顾问
+    <image class="daikuan_right_img" src="../../image/jiantou_btn2.png"></image>
+    </view>
+</view> -->
+<view class="modle_nav">
+  <view class="modle_nav_biaoji"></view>
+  <text>服务保障</text>
+</view>
+<view class="choose_area">
+  <view bindtap="toast_second" class="choose_area_modle" wx:for="{{carInfo.ensure}}" wx:key="4">
+    <image class="choose_area_modle_img" src="{{item['image']}}"></image>
+    <view class="choose_area_modle_title">{{item['name']}}</view>
+  </view>
+</view>
+
+<view class="modle_nav" style="border:none;padding-bottom:1.5rpx;">
+  <view class="modle_nav_biaoji"></view>
+  <text>车辆信息</text>
+</view>
+<view class="car_message">
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.producttime}}</text>
+    <text>出厂时间</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.year}}</text>
+    <text>上牌时间</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.km}}万</text>
+    <text>表显里程</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg" wx:if="{{carInfo.gearbox==0}}">手自一体</text>
+    <text class="msg" wx:if="{{carInfo.gearbox==1}}">手动档</text>
+    <text class="msg" wx:if="{{carInfo.gearbox==2}}">自动挡</text>
+    <text>变速箱</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.exhaust}}</text>
+    <text>排量</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.identify}}</text>
+    <text>编号</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.caraddress}}</text>
+    <text>上牌地</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.transnum}}</text>
+    <text>过户次数</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.carcolor}}</text>
+    <text>车辆颜色</text>
+  </view>
+  <view class="car_message_li">
+    <text class="msg">{{carInfo.effluentstand}}</text>
+    <text>排放标准</text>
+  </view>
+</view>
+<view class="modle_nav" style="border:none;padding-bottom:1.5rpx;">
+  <view class="modle_nav_biaoji"></view>
+  <text>车况描述</text>
+</view>
+<view class="car_message cardes_container">
+  <view>{{carInfo.cardes}}</view>
+</view>
+
+
+<view wx:if="{{carInfo.x&&carInfo.y}}">
+  <view class="modle_nav" style="border:none;padding-bottom:1.5rpx;border-top:1rpx solid #f9f9f9;font-size: 24rpx;color: #333333;">
+    <view class="daohang_text">
+      <image class="modle_nav_dizhiImg" src="/pages/image/dingwei2_btn.png"></image>{{carInfo.caraddress}}</view>
+    <button bindtap="company" class="index_modle_btn" data-name="{{carInfo.name}}" data-x="{{carInfo.x}}" data-y="{{carInfo.y}}" style="margin-top:17rpx;">快速导航</button>
+  </view>
+</view>
+<view class="nav"></view>
+<block wx:if="{{wxqunShow==1}}" wx:for="{{wxqun}}" wx:for-index="index" wx:key="6">
+  <view class="wxqun" bindtap="">
+    <view class="wxqun_img">
+      <image src="../../image/weixin_img.png" />
+    </view>
+    <view class="wxqun_text">
+      <view class="title">{{item['name']}}</view>
+      <view>{{item['des']}}</view>
+    </view>
+    <view class="wxqun_jion" bindtap="wxqunBool">立即加入</view>
+  </view>
+  <view class="mine_border"></view>
+  <view class="wxqun_modle" wx:if="{{wxqunModle}}">
+    <view>
+      <image src="{{item.qrcode}}" mode="aspectFit|aspectFill|widthFix" data-src="{{item.qrcode}}" bindtap="previewImage_wximg" />
+      <text bindtap="wxqunBool">X</text>
+    </view>
+  </view>
+</block>
+<view class="nav"></view>
+<view class="modle_nav">
+  <view class="modle_nav_biaoji"></view>
+  <text>车辆介绍</text>
+</view>
+<view wx:for="{{carInfo.image}}">
+  <image bindtap="previewImage" class="modle_nav_carImg" data-src="{{item.img_patch}}" mode="widthFix" src="{{item.img_patch}}"></image>
+  <view class="jieshao_view" wx:if="{{item.intro}}">
+    {{item.intro}}
+  </view>
+</view>
+<view class="guanggao" wx:if="{{unitid!=123}}">
+  <ad unitId="{{unitid}}"></ad>
+</view>
+<view class="nav"></view>
+<view class="modle_nav">
+  <view class="modle_nav_biaoji"></view>
+  <text>猜你喜欢</text>
+</view>
+<view class="modle" wx:for="{{carInfo.car_list}}" wx:for-index="indexs" wx:key="6">
+  <view class="tuijian" wx:if="{{item['top_status']}}">推荐</view>
+  <image bindtap="detile" class="modle_img" data-id="{{item.id}}" mode="aspectFill" src="{{item.carimg}}"></image>
+  <view bindtap="detile" class="message_border" data-id="{{item.id}}">
+    <view class="modle_name">
+      <view class="ziying" wx:if="{{item.is_vip==1}}">认证车商</view>
+      <view class="ziying" wx:if="{{item.uid==0}}">自营</view>
+      <!-- {{item.name}} {{item.agelimit==0?'全新车':'车龄 '+item.agelimit+'年'}} {{item.exhaust}} {{item.gearbox==0?'手自一体':''}}{{item.gearbox==1?'手动档':''}}{{item.gearbox==2?'自动档':''}}</view> -->
+
+      <!-- 2、3级分类  -->
+      <text>{{item.brand.name}}</text>-<text>{{item.brand2.name}}</text>
+      <view style="color:#393D49;font-size:20rpx;margin-top:15rpx;">{{item.brand3.name}}</view>
+    </view>
+    <view class="modle_chexing"> {{item.year}} | {{item.km}}万公里
+    </view>
+    <view class="modle_price">{{item.price}}万
+    </view>
+  </view>
+</view>
+<view class="nav"></view>
+<!-- <view class="modle_nav">
+    <view class="modle_nav_biaoji"></view>
+    <text>交易提醒</text>
+</view>
+<view class="btm_message_border">
+    <view class="btm_message">
+        <text>{{carInfo.market.remind}}</text>
+    </view>
+</view> -->
+
+<view class='ad-container'>
+  <image src='{{ad_detail}}' />
+</view>
+<view class="nav_nav"></view>
+<view class="btm_nav">
+  <view bindtap="toIndex" class="btm_nav_small" data-form_type="2">
+    <image class="btm_nav_small_img" src="../../image/shouyewdj_btn1.png"></image>
+    <view class="btm_nav_small_title">返回首页</view>
+  </view>
+  <view bindtap="follow" class="btm_nav_small">
+    <image class="btm_nav_small_img" hidden="{{follow_status}}" src="../../image/shoucangwdj_btn.png"></image>
+    <image class="btm_nav_small_img" hidden="{{!follow_status}}" src="../../image/shoucangwdj_btn_copy.png"></image>
+    <view class="btm_nav_small_title">收藏</view>
+  </view>
+  <view bindtap="yan" class="btm_nav_small" data-form_type="1">
+    <image class="btm_nav_small_img" src="../../image/liuyan_btn.png"></image>
+    <view class="btm_nav_small_title">留言</view>
+  </view>
+  <!-- <view bindtap="yan" class="btm_nav_small" data-form_type="2">
+        <image class="btm_nav_small_img" src="../../image/jubao_btn.png"></image>
+        <view class="btm_nav_small_title">举报</view>
+    </view> -->
+
+  <view class="wxqun_modle" wx:if="{{kfqrcode_show}}">
+    <view>
+      <image src="{{kf_qrcode}}" mode="aspectFit|aspectFill|widthFix" data-src="{{kf_qrcode}}" bindtap="previewImage_wximg" />
+      <text bindtap="kfqrcodeBool">X</text>
+    </view>
+  </view>
+
+  <!-- <view class="btm_nav_big_index" bindtap="tel">询问底价</view> -->
+  <button class="btm_nav_big_index" open-type="contact" disabled="{{isvip===2}}">询问底价</button>
+  <button bindtap="mengceng_Block" class="btm_nav_big_second">立即分享
+  </button>
+</view>
+<view class="page" wx:if="{{mengcengBlock==1}}">
+  <view bindtap="mengceng_none" class="click_none"></view>
+  <view class="block_modle_view {{modleBlock==1?'modle_view_block':'modle_view_none'}}">
+    <button class="block_modle_view_modle {{modleBlock==1?'modle_index_block':'modle_index_none'}}" openType="share">
+      <image class="block_modle_view_modle_img" src="../../image/lijifenxiang.png"></image>
+      <view class="block_modle_view_modle_title">立即分享</view>
+    </button>
+    <button bindtap="poster" class="block_modle_view_modle {{modleBlock==1?'modle_second_block':'modle_second_none'}}">
+      <image class="block_modle_view_modle_img" src="../../image/shengchenghaibao.png"></image>
+      <view class="block_modle_view_modle_title">生成海报</view>
+    </button>
+  </view>
+</view>

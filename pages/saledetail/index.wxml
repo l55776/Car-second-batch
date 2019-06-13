@@ -1,0 +1,142 @@
+<import src="/pages/template/header.wxml" />
+<template is="header" data="{{...headerdata}}" />
+<form bindreset="formReset" bindsubmit="release" reportSubmit="true">
+  <view class="modle">
+    车辆类型
+    <text class="must_red">*</text>
+    <picker bindchange="selectclass" class="modle_right" range="{{classes}}" rangeKey="name" value="{{index}}">
+      <view>
+        {{selectclass}}
+      </view>
+    </picker>
+  </view>
+  <view bindtap="selectbrand" class="modle">
+    车辆品牌
+    <text class="must_red">*</text>
+    <view class="modle_right">
+
+      {{selectbrand}}
+
+    </view>
+  </view>
+  <view class="modle">
+    出厂年份
+    <text class="must_red">*</text>
+    <picker bindchange="bindDateChange" class="modle_right" fields="month" mode="date" value="{{date}}">
+      <view>
+        {{selecttime}}
+      </view>
+    </picker>
+  </view>
+  <view class="modle">
+    上牌日期
+    <text class="must_red">*</text>
+    <picker bindchange="vehicletime" class="modle_right" fields="day" mode="date" value="{{date}}">
+      <view>
+        {{vehicletime}}
+      </view>
+    </picker>
+  </view>
+
+  
+  <view class="modle">
+    <!-- 保险到期时间
+    <text class="must_red">*</text>
+        <picker bindchange="insurance" class="modle_right" fields="day" mode="date" value="{{date}}">
+            <view>
+        {{insurance}}
+      </view>
+        </picker>
+    </view>
+    <view class="modle"> -->
+    <!-- 汽车名称
+    <text class="must_red">*</text>
+        <input class="modle_right" name="carname" placeholder="请输入汽车名称" placeholderStyle="color: #9295A8;" type="text" value="{{cardetail.name}}"></input>
+    </view>
+    <view class="modle"> -->
+    公里数(单位万)
+    <text class="must_red">*</text>
+    <input class="modle_right" name="kilometre" placeholder="请输入公里数" placeholderStyle="color: #9295A8;" type="text" value="{{cardetail.km}}"></input>
+  </view>
+  <view class="modle">
+    价格(单位万)
+    <text class="must_red">*</text>
+    <input class="modle_right" name="price" placeholder="请输入转让价格单位：万" placeholderStyle="color: #9295A8;" type="text" value="{{cardetail.price}}"></input>
+  </view>
+  <view class="modle">
+    排气量
+    <text class="must_red">*</text>
+    <input class="modle_right" name="exhaust" placeholder="请输入排气量（如：1.6）" placeholderStyle="color: #9295A8;" style="width:300rpx;" type="text" value="{{cardetail.exhaust}}"></input>
+  </view>
+  <view class="modle">
+    变速箱
+    <text class="must_red">*</text>
+    <picker bindchange="gearbox" class="modle_right" mode="selector" range="{{gearboxes}}" rangeKey="name" value="{{index}}">
+      <view>
+        {{gearboxname}}
+      </view>
+    </picker>
+  </view>
+  <view class="modle">
+    <!-- 车主姓名
+    <text class="must_red">*</text>
+        <input class="modle_right" name="username" placeholder="请输入车主姓名" placeholderStyle="color: #9295A8;" type="text" value="{{cardetail.username}}"></input>
+    </view>
+    <view class="modle"> -->
+    看车地点
+    <text class="must_red">*</text>
+    <input class="modle_right" name="watchcar" placeholder="请输入看车地点（如：北京）" placeholderStyle="color: #9295A8;" style="width:320rpx;" type="text" value="{{cardetail.watchcar}}"></input>
+  </view>
+  <view class="modle">
+    过户次数
+    <text class="must_red">*</text>
+    <input class="modle_right" name="transnum" placeholder="请输入过户次数" placeholderStyle="color: #9295A8;" style="width:320rpx;" type="text" value="{{cardetail.transnum}}"></input>
+  </view>
+  <view class="modle">
+    排放标准
+    <text class="must_red">*</text>
+    <picker bindchange="effluentstandbox" class="modle_right" mode="selector" range="{{effluentstandboxs}}" rangeKey="name" value="{{index}}">
+    <view>{{effluentstandname}}</view>
+    </picker>
+  </view>
+  <view class="modle">
+    <!-- 车身颜色
+    <text class="must_red">*</text>
+    <input class="modle_right" name="watchcar" placeholder="" placeholderStyle="color: #9295A8;" style="width:320rpx;" type="text" value="{{cardetail.watchcar}}"></input>
+  </view>
+  <view class="modle"> -->
+    联系电话
+    <text class="must_red">*</text>
+    <button bindgetphonenumber="getPhoneNumber" class="modle_btn" openType="getPhoneNumber">电话授权</button>
+    <input class="modle_right" name="phone" placeholder="请输入电话" placeholderStyle="color: #9295A8;" type="number" value="{{userphone}}"></input>
+  </view>
+  <view class="modle">
+    车辆地址
+    <text class="must_red">*</text>
+    <button bindtap="tomap" class="modle_btn">获取位置</button>
+    <input class="modle_right" disabled="true" name="address" placeholder="" placeholderStyle="color: #9295A8;" style="width:350rpx;" type="text" value="{{mapname&&mapname.length>2?mapname:''}}"></input>
+  </view>
+  <view class="modle" style="border-bottom:0">
+    车辆信息
+    <button bindtap="addcarsimgs" class="modle_btn">添加信息</button>
+  </view>
+  <view wx:for="{{carsimgs}}">
+    <view class="shangchuan_view_border">
+      <view class="shangchuan_view" wx:if="{{item.img!=''}}">
+        <image bindtap="upthiscarsimgs" class="shangchuan_Img_close" data-index="{{index}}" src="/pages/image/tupiangb_btn.png"></image>
+        <image class="shangchuan_Img" src="{{item.img}}"></image>
+      </view>
+      <view class="shangchuan_view" wx:if="{{item.img==''}}">
+        <image bindtap="upcarsimgs" class="shangchuan_Img" data-index="{{index}}" src="/pages/image/tianjiantp_btn.png"></image>
+      </view>
+    </view>
+    <view class="car_messageView">
+      <input bindblur="setthisintro" class="car_messageView_input" data-index="{{index}}" placeholder="请输入你的车辆信息" placeholderStyle="color: #9295A8;" type="text" value="{{item.intro}}"></input>
+      <view bindtap="delcarsimgs" class="car_messageView_sc" data-index="{{index}}">删除</view>
+    </view>
+  </view>
+  <button class="bufa_btn" disabled="{{buttscan}}" formType="submit">修改</button>
+  <view class="jinggao">发布不真实车源，虚报价格，一经合适将做封号处理。</view>
+</form>
+<import src="/pages/alert/index.wxml"></import>
+<template is="alert" data="{{isShow:isShow}}"></template>

@@ -1,0 +1,65 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<form bindreset="formReset" bindsubmit="release" reportSubmit="true">
+    <view class="body">
+      <view class="modle">
+        区间(万元)
+        <input class="modle_right" name="pricemax" placeholder="请输入最高价格" placeholderStyle="color: #9295A8;" type="text" value='{{value_default}}' />
+         <input class="modle_right" name="pricemin" placeholder="请输入最低价格" placeholderStyle="color: #9295A8;" type="text" value='{{value_default}}' />
+      </view>
+      <view class="modle">
+        地区
+        <!-- <input class="modle_right" name="address" placeholder="请输入地区" placeholderStyle="color: #9295A8;" type="text" value='{{value_default}}'></input> -->
+        <picker class="modle_right" mode="region" bindchange="bindRegionChange">
+            <input disabled="{{true}}" name="address" placeholder="请输入地区" placeholderStyle="color: #9295A8;" type="text" value='{{region_value}}' style="margin-top:10px;"></input>
+        </picker>
+      </view>
+      <view bindtap="selectbrand" class="modle">
+        车辆品牌
+          <view class="modle_right">
+            {{selectbrand}}
+          </view>
+      </view>
+      <view class="modle">
+        年份
+        <input class="modle_right" name="date" placeholder="请输入年份" style="width:300rpx;" value='{{value_default}}'></input>
+      </view>
+      <view class="modle">
+      行驶里程（万公里）
+      <input class="modle_right" name="licheng" placeholder="请输入行驶里程" style="width:300rpx;" value='{{value_default}}'></input>
+        </view>
+        <view class="modle">
+        车身颜色
+            <picker bindchange="carcolorbox" class="modle_right" mode="selector" range="{{carcolorboxs}}" rangeKey="name" value="{{index}}">
+                <view>
+              {{carcolorname}}
+              </view>
+            </picker>
+        </view>
+        <view class="modle">
+      联系方式
+      <button bindgetphonenumber="getPhoneNumber" class="shouquan_btn" openType="getPhoneNumber">电话授权</button>
+            <input class="modle_right" name="phone" placeholder="请输入您的电话" style="margin-right:20rpx;width:300rpx;" value="{{userphone}}"></input>
+        </view>
+      <!-- <view class="modle" style="border-bottom:0">
+      车辆详图
+      </view>
+        <view class="shop_view_border">
+            <view class="shop_view" wx:if="{{item.img!=''}}" wx:for="{{carsimgs}}" wx:key="item">
+                <image bindtap="upthiscarsimgs" class="shop_view_closeimg" data-index="{{index}}" src="../image/tupiangb_btn.png"></image>
+                <image bindtap="showimgs" class="shop_view_img" data-index="{{index}}" src="{{item.img}}"></image>
+            </view>
+            <view class="shop_view" wx:if="{{carsimgs.length<3}}">
+                <image bindtap="upcarsimgs" class="shop_view_img" src="../image/tianjiantp_btn.png"></image>
+            </view>
+        </view> -->
+      <view class="modle" style='height:300rpx;'>
+          其他
+        <textarea name="otherdes" value="{{value_default}}" placeholder="请输入车况信息" style='width:100%;height:200rpx;color:#9295A8;font-size:28rpx;line-height:35rpx;' />
+      </view>
+    </view>
+    <button class="commit_btn" formType="submit">发布</button>
+</form>
+<view class='ad-container'><image src='{{ad_buycar}}' /></view>
+<import src="/pages/alert/index.wxml"></import>
+<template is="alert" data="{{isShow:isShow}}"></template>

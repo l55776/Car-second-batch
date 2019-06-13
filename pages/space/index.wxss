@@ -1,0 +1,58 @@
+.modle {
+    height: 100rpx;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1rpx solid #f9f9f9;
+}
+
+.modle_img {
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 100%;
+    float: left;
+}
+
+.modle_title {
+    font-weight: bold;
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color: #333333;
+    width: 50%;
+    float: left;
+    margin-left: 23rpx;
+}
+
+.modle_btn {
+    background: #ff6600;
+    width: 100rpx;
+    height: 54rpx;
+    text-align: center;
+    line-height: 54rpx;
+    float: right;
+    font-size: 28rpx;
+    margin-top: 25rpx;
+    color: #FFFFFF;
+    border-radius: 10rpx;
+}
+
+.modle_btn_no {
+    background: #d0d0d0;
+    width: 100rpx;
+    height: 54rpx;
+    text-align: center;
+    line-height: 54rpx;
+    float: right;
+    font-size: 28rpx;
+    margin-top: 25rpx;
+    color: #FFFFFF;
+    border-radius: 10rpx;
+}
+
+.choose_view_modle_img {
+    height: 40rpx;
+    margin-top: -5rpx;
+    width: 40rpx;
+    vertical-align: middle;
+}

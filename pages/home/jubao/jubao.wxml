@@ -1,0 +1,60 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view wx:if="{{feedback_type!=1}}">
+    <view class="banner" wx:if="{{feedback_type!=1}}">
+        <view class="banner_top">
+            <image class="banner_top_img" src="../../image/duigou_icn.png"></image>
+            请选择举报的理由</view>
+        <view class="banner_bottom">本平台会坚决落实非法、虚假、色情等信息，你的举报我们会认真查实并根据平台协议进行落实！</view>
+    </view>
+    <view class="nav" wx:if="{{feedback_type!=1}}"></view>
+    <view class="modle_nav" wx:if="{{feedback_type!=1}}">
+        <view class="modle_nav_biaoji"></view>
+        <text>车辆信息</text>
+    </view>
+    <form bindsubmit="formSubmit">
+        <radio-group bindchange="radioChange" wx:if="{{feedback_type!=1}}">
+            <label wx:for="{{items}}" wx:key="1">
+                <view class="modle_nav">
+                    <radio checked="{{item.checked}}" color="#0AC2AE" value="{{index}}"></radio>
+                    <text>{{item.name}}</text>
+                </view>
+            </label>
+        </radio-group>
+        <view class="nav"></view>
+        <view class="modle_nav">
+            <view class="modle_nav_biaoji"></view>
+            <text>{{feedback_type==1?'留言内容':'举报理由'}}</text>
+        </view>
+        <textarea class="text_area" name="content" placeholder="{{feedback_type==1?'留言内容':'举报理由'}}（不少于20字）" placeholderStyle="color:9295A8"></textarea>
+        <view class="btn_view">
+            <button class="tijiao_btn tijiao_btn_active" formType="submit">提交</button>
+        </view>
+    </form>
+</view>
+<view wx:if="{{feedback_type==1}}">
+    <view class="modle" wx:if="{{content.length>0}}" wx:for="{{content}}">
+        <view class="modle_top">
+            <image class="modle_top_img" src="{{item.head_image}}"></image>
+            <view class="modle_top_text_index">{{item.nickname?item.nickname:'匿名留言'}}</view>
+            <view class="modle_top_text_second">{{item.time}}</view>
+        </view>
+        <view class="modle_text">{{item.content}}</view>
+    </view>
+    <view bindtap="more" class="more" wx:if="{{more_status&&content.length>3}}">查看更多
+        <image class="more_img" src="/pages/image/lvsejtxx_btn.png"></image>
+    </view>
+    <view class="nav"></view>
+    <form bindsubmit="formSubmit">
+        <view class="modle_nav">
+            <view class="modle_nav_biaoji"></view>
+            <text>商家留言</text>
+        </view>
+        <textarea class="text_area" name="content" placeholder="{{feedback_type==1?'留言内容':'举报理由'}}（不少于20字）" placeholderStyle="color:9295A8"></textarea>
+        <view class="btn_view">
+            <button class="tijiao_btn tijiao_btn_active" formType="submit">提交</button>
+        </view>
+    </form>
+</view>
+<import src="/pages/alert/index.wxml"></import>
+<template is="alert" data="{{isShow:isShow}}"></template>

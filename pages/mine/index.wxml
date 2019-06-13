@@ -1,0 +1,192 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<block wx:if="{{!is_member}}">
+    <view class="mine_box">
+        <view class="mine_banner">
+            <image src="../image/mine_banner.jpg" />
+        </view>
+        <view class="mine_msg">
+            <view class="mine_tou">
+                <image bindtap="goset" src="{{detail.user.head_image?detail.user.head_image:memberInfo.avatar}}" mode="aspectFill"></image>
+            </view>
+            <view class="text_msg">
+                <view class="title">{{vipData.vipLv}}</view>
+                <view class="small">{{detail.user.nickname}}</view>
+            </view>
+            <view class="text_time">
+                <text class="">{{vip_words}}</text>
+            </view>
+            <view class="text_vip" bindtap="binding">
+                <text>立即加入</text>
+            </view>
+            <view class="text_ps">
+                <text>请添加客服微信chemiaopi</text>
+            </view>
+        </view>
+        <view class="banner_modle_down">
+            <navigator class="banner_modle_down_modle" url="/pages/collection/index">
+                <view class="banner_modle_down_modle_top">{{detail.stotal?detail.stotal:0}}</view>
+                <view class="banner_modle_down_modle_down">收藏</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/fensi/fensi?type=2">
+                <view class="banner_modle_down_modle_top">{{detail.gtotal?detail.gtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">关注</view>
+            </navigator> 
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/salelist/index">
+                <view class="banner_modle_down_modle_top">{{detail.fbtotal?detail.fbtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">发布</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/integral/integral">
+                <view class="banner_modle_down_modle_top">{{detail.jifen?detail.jifen:0}}</view>
+                <view class="banner_modle_down_modle_down">积分</view>
+            </navigator>
+        </view>
+    </view>
+</block>
+
+<block wx:else>
+    <view class="mine_box">
+        <view class="mine_banner">
+            <image src="../image/mine_banner.jpg" />
+        </view>
+        <view class="mine_msg">
+            <view class="mine_tou">
+                <image bindtap="goset" src="{{detail.user.head_image?detail.user.head_image:memberInfo.avatar}}" mode="aspectFill"></image>
+            </view>
+            <view class="text_msg">
+                <view class="title">{{vipData.vipLv}}</view>
+                <view class="small">{{detail.user.nickname}}</view>
+            </view>
+            <view class="text_time">
+                <text class="">会员到期:{{detail.user.end_time}}</text>
+            </view>
+            <view class="text_vip" bindtap="binding">
+                <text>续费会员</text>
+            </view>
+        </view>
+        <view class="banner_modle_down">
+            <navigator class="banner_modle_down_modle" url="/pages/collection/index">
+                <view class="banner_modle_down_modle_top">{{detail.stotal?detail.stotal:0}}</view>
+                <view class="banner_modle_down_modle_down">收藏</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/fensi/fensi?type=2">
+                <view class="banner_modle_down_modle_top">{{detail.gtotal?detail.gtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">关注</view>
+            </navigator> 
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/salelist/index">
+                <view class="banner_modle_down_modle_top">{{detail.fbtotal?detail.fbtotal:0}}</view>
+                <view class="banner_modle_down_modle_down">发布</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/integral/integral">
+                <view class="banner_modle_down_modle_top">{{detail.user.weizhang_num}}</view>
+                <view class="banner_modle_down_modle_down">积分</view>
+            </navigator>
+        </view>
+    </view>
+</block>
+<view class="mine_border"></view>
+<view class="modle">
+    <view bindtap="tuiguang" class="banner_modle">
+        <view class="modle_modle_border"></view>
+        <image class="modle_modle_img" src="../image/wdfb_btn.png"></image>
+        <view class="modle_modle_name">推广中心</view>
+    </view>
+    <view bindtap="mefabu" class="banner_modle">
+        <view class="modle_modle_border"></view>
+        <image class="modle_modle_img" src="../image/fa.png"></image>
+        <view class="modle_modle_name">我的发布</view>
+    </view>
+    <view bindtap="block_click" class="banner_modle">
+        <view class="modle_modle_border"></view>
+        <image class="modle_modle_img" src="../image/kefu_btn.png"></image>
+        <view class="modle_modle_name">联系客服</view>
+    </view>
+    <view bindtap="goset" class="banner_modle">
+        <image class="modle_modle_img" src="../image/shezhi_icon.png"></image>
+        <view class="modle_modle_name">设置中心</view>
+    </view>
+</view>
+<navigator class="choose_view" style="margin-top:20rpx;" url="/pages/publicity/index" wx:if="{{is_member}}">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/tuiguangma_btn.png"></image>店铺码
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+        <text class="choose_view_modle_num"></text>
+    </view>
+</navigator>
+<view class="mine_border"></view>
+<view class="mine_kefu">
+    <view class="weixin_icon">
+        <image src="../image/weixin_icon.png" mode="aspectFit|aspectFill|widthFix" />
+    </view>
+    <view class="mine_kefu_t">
+        <view>车秒批客服微信</view>
+        <view>{{weixinkefu}}</view>
+    </view>
+    <view class="weixin_img">
+        <image src="{{kefu_qrcode}}" mode="aspectFit|aspectFill|widthFix" />
+    </view>
+    <view class="mine_kefu_copy" bindtap="mine_kefu_copy">
+        <text>点击复制</text>
+    </view>
+</view>
+<view class="mine_border"></view>
+<navigator class="choose_view" url="/pages/store/index">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/yulan_icn.png"></image>店铺预览
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+        <text class="choose_view_modle_num"></text>
+    </view>
+</navigator>
+<view class="choose_view">
+    <view bindtap="retocollection" class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/wdsc_icn.png"></image>我的收藏
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+        <text class="choose_view_modle_num"></text>
+    </view>
+</view>
+<navigator class="choose_view" url="/pages/fensi/fensi?type=2">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/wodeguanzhu_icn.png"></image>我的关注
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+    </view>
+</navigator>
+<!-- <navigator class="choose_view" url="/pages/fensi/fensi?type=1">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/gzwd_icn.png"></image>关注我的
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+    </view>
+</navigator>
+<navigator class="choose_view" url="/pages/part/order/index">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/partOrder.png"></image>汽配订单
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+    </view>
+</navigator> -->
+<view class="choose_view">
+    <view bindtap="payorder" class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/wdsc_icn.png"></image>支付凭证
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+        <text class="choose_view_modle_num"></text>
+    </view>
+</view>
+<view class="nav"></view>
+<navigator class="choose_view" url="/pages/home/liuyan/liuyan">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/chakanliuyan_icn.png"></image>查看留言
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+    </view>
+</navigator>
+<button class="choose_view" openType="contact">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="../image/kefu_icn.png"></image>客服帮助
+        <image class="choose_view_modle_backImg" src="../image/jiantou_btn.png"></image>
+    </view>
+</button>
+<import src="/pages/alert/index.wxml"></import>
+<template is="alert" data="{{isShow:isShow}}"></template>

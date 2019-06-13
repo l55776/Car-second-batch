@@ -1,0 +1,4 @@
+<!--pages/release/index.wxml-->
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<text>pages/release/index.wxml</text>

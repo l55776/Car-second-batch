@@ -1,0 +1,29 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="banner">
+    <view class="banner_top">¥{{detail.account?detail.account:0}}</view>
+    <view class="banner_top">¥{{detail.brokerage?detail.brokerage:0}}</view>
+    <view class="banner_btm">总计消费</view>
+    <view class="banner_btm">产生佣金</view>
+    <view class="banner_border"></view>
+</view>
+<view class="modle" wx:if="{{list.length>0}}" wx:for="{{list}}">
+    <view class="modle_shop">
+        <image class="modle_headImg" src="{{item.head_image}}"></image>
+        <view class="modle_textView">
+            <view class="modle_textView_top">{{item.nickname}}
+        <text class="modle_textView_top_right">消费：¥{{item.account}}</text>
+            </view>
+            <view class="modle_textView_bottom">{{item.content}}：{{item.create_time}}</view>
+        </view>
+    </view>
+    <view class="modle_bottomText">佣金：
+    <text class="modle_bottomText_num">¥{{item.brokerage}}</text>
+    </view>
+</view>
+<block wx:if="{{list.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:'暂无查看数据'}}"></template>
+    </view>
+</block>

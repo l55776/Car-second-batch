@@ -1,0 +1,481 @@
+@import "../../alert/index.wxss";
+
+page {
+  background: #f9f9f9;
+}
+
+.mine_box {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mine_banner {
+  width: 100%;
+  height: 400rpx;
+}
+
+.mine_banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.mine_msg {
+  width: 100%;
+  height: 400rpx;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  box-sizing: border-box;
+}
+
+.mine_tou {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 50rpx;
+  background: #999;
+}
+
+.mine_tou image {
+  width: 100%;
+  height: 100%;
+}
+
+.text_msg {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 20rpx;
+}
+
+.text_msg .title {
+  font-size: 30rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+.text_msg .small {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 10rpx 0 20rpx 0;
+}
+
+.text_time {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: yellow;
+}
+
+.text_vip {
+  width: 180rpx;
+  height: 60rpx;
+  margin: 15rpx auto;
+  background: linear-gradient(180deg, yellow, #f60);
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.text_ps {
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 10rpx auto;
+}
+
+.mine_border {
+  width: 100%;
+  height: 15rpx;
+  background: #f9f9f9;
+}
+
+.mine_kefu {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  background: #fff;
+  padding: 20rpx 30rpx;
+}
+
+.mine_kefu image {
+  width: 100%;
+  height: 100%;
+}
+
+.weixin_icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.mine_kefu_t {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 28rpx;
+  padding: 0 10rpx;
+}
+
+.weixin_img {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 100rpx;
+}
+
+.mine_kefu_copy {
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: #f60;
+  border-radius: 6rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.banner_modle_down {
+  height: 135rpx;
+  padding-top: 1rpx;
+  margin: 0 auto;
+  display: block;
+  width: 630rpx;
+  background: #fff;
+}
+
+.banner_modle_down_modle {
+  width: 156rpx;
+  vertical-align: top;
+  height: 137rpx;
+  display: inline-block;
+}
+
+.banner_modle_down_modle_top {
+  font-size: 30rpx;
+  color: #000;
+  width: 100%;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.banner_modle_down_modle_down {
+  font-size: 24rpx;
+  color: #9295a8;
+  width: 100%;
+  text-align: center;
+}
+
+.banner_modle_down_border {
+  width: 1rpx;
+  display: inline-block;
+  vertical-align: top;
+  height: 30rpx;
+  background: #f0f0f0;
+  margin-top: 50rpx;
+}
+
+.banner {
+  width: 100%;
+  height: 300rpx;
+  background: #fb9145;
+}
+
+.banner_modle {
+  height: 300rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: -240rpx;
+  background: #fff;
+  box-shadow: 0 4rpx 6rpx 0 rgba(0, 0, 0, 0.10);
+  border-radius: 10rpx;
+}
+
+.banner_modle_top {
+  height: 100rpx;
+  width: 630rpx;
+  padding-top: 30rpx;
+  /* padding-bottom: 30rpx; */
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #f9f9f9;
+}
+
+.banner_modle_top_img {
+  height: 100rpx;
+  float: left;
+  width: 100rpx;
+  border-radius: 100%;
+}
+
+.banner_modle_top_title {
+  font-size: 30rpx;
+  color: #000;
+  float: left;
+  width: 80%;
+  margin-left: 20rpx;
+}
+
+.banner_modle_top_btn {
+  border: 1px solid #fb9145;
+  border-radius: 100rpx;
+  height: 36rpx;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+  width: 90rpx;
+  text-align: center;
+  line-height: 36rpx;
+  font-size: 25rpx;
+  color: #fb9145;
+}
+
+.banner_modle_down {
+  height: 135rpx;
+  padding-top: 1rpx;
+  margin: 0 auto;
+  display: block;
+  width: 630rpx;
+}
+
+.banner_modle_down_modle {
+  width: 156rpx;
+  vertical-align: top;
+  height: 137rpx;
+  display: inline-block;
+}
+
+.banner_modle_down_modle_top {
+  font-size: 30rpx;
+  color: #000;
+  width: 100%;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.banner_modle_down_modle_down {
+  font-size: 24rpx;
+  color: #9295a8;
+  width: 100%;
+  text-align: center;
+}
+
+.banner_modle_down_border {
+  width: 1rpx;
+  display: inline-block;
+  vertical-align: top;
+  height: 30rpx;
+  background: #f0f0f0;
+  margin-top: 50rpx;
+}
+
+.page_nav {
+  height: 20rpx;
+  width: 100%;
+}
+
+.choose_view {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  border-radius: 0;
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+}
+
+.choose_view_modle {
+  width: 94%;
+  height: 88rpx;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #f9f9f9;
+  margin-left: 3%;
+}
+
+.choose_view_modle_backImg {
+  height: 30rpx;
+  width: 30rpx;
+  float: right;
+  margin-top: 29rpx;
+}
+
+.choose_view_modle_num {
+  color: #9295a8;
+  font-size: 24rpx;
+  float: right;
+}
+
+.nav {
+  height: 20rpx;
+  width: 100%;
+}
+
+.shezhi {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rpx;
+  float: right;
+  border-radius: 0;
+  background: #fff;
+  height: 70rpx;
+  margin-top: -20rpx;
+  width: 50rpx;
+}
+
+.shezhi1 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background: none;
+  top: 30rpx;
+  right: 30rpx;
+}
+
+.shezhi_img1 {
+  height: 38rpx;
+  padding: 12rpx;
+  width: 38rpx;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.40);
+}
+
+.shezhi_img {
+  height: 40rpx;
+  margin-top: -20rpx;
+  width: 40rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.choose_view_modle_img {
+  height: 40rpx;
+  margin-top: -5rpx;
+  width: 40rpx;
+  vertical-align: middle;
+  padding-right: 15rpx;
+}
+
+.banner1 {
+  height: 340rpx;
+  width: 100%;
+}
+
+.banner_message1 {
+  height: 298rpx;
+  background: #fff;
+  margin-top: -44rpx;
+  width: 100%;
+}
+
+.banner_message_img1 {
+  height: 44rpx;
+  width: 100%;
+}
+
+.banner_message_headImg1 {
+  height: 100rpx;
+  border: 3rpx solid #fff;
+  position: absolute;
+  width: 100rpx;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: -52rpx;
+}
+
+.banner_message_name1 {
+  width: 100%;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.banner_message_huiyuan1 {
+  width: 100%;
+  font-size: 24rpx;
+  color: #d39f43;
+  margin-top: 15rpx;
+  text-align: center;
+}
+
+.banner_message_huiyuan_img1 {
+  height: 30rpx;
+  width: 30rpx;
+  padding-left: 10rpx;
+  vertical-align: middle;
+  margin-top: -5rpx;
+}
+
+.banner_modle_down1 {
+  height: 135rpx;
+  padding-top: 1rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.banner_modle_down_modle1 {
+  width: 187rpx;
+  vertical-align: top;
+  height: 137rpx;
+  display: inline-block;
+}
+
+.banner_modle_down_modle_top1 {
+  font-size: 30rpx;
+  color: #000;
+  width: 100%;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.banner_modle_down_modle_down1 {
+  font-size: 24rpx;
+  color: #9295a8;
+  width: 100%;
+  text-align: center;
+}
+
+.banner_modle_down_border1 {
+  width: 1rpx;
+  display: inline-block;
+  vertical-align: top;
+  height: 30rpx;
+  background: #f0f0f0;
+  margin-top: 50rpx;
+}
+
+.ad-container {
+  width: 100%;
+  height: 1000rpx;
+  margin-top: 20rpx;
+}
+
+.ad-container image {
+  width: 100%;
+  height: 100%;
+}
+
+.btm_nav {
+  height: 30rpx;
+  width: 100%;
+}
+
+.banner1 {
+  width: 100%;
+  min-height: 1000rpx;
+}

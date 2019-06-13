@@ -1,0 +1,14 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<form bindreset="formReset" bindsubmit="release" reportSubmit="true">
+    <view class="modle">
+        <input class="modle_right btm_input" name="phone" placeholder="" placeholderStyle="color: #9295A8;" type="number" value="{{userphone}}"></input>
+    联系电话
+    <text class="must_red">*</text>
+        <button bindgetphonenumber="getPhoneNumber" class="modle_btn" openType="getPhoneNumber">电话授权</button>
+    </view>
+    <button class="bufa_btn" formType="submit">提交</button>
+    <view class="jinggao">提交后销售顾问会与您联系</view>
+</form>
+<import src="/pages/alert/index.wxml"></import>
+<template is="alert" data="{{isShow:isShow}}"></template>

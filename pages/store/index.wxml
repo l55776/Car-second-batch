@@ -1,0 +1,124 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view wx:if="{{details.is_member}}">
+    <view class="banner">
+        <view class="banner_backmengceng">
+            <image class="banner_headImg" src="{{details.head_image}}"></image>
+            <view class="banner_name">{{details.nickname}}</view>
+            <view class="banner_title">人气 {{browse?browse:'0'}}丨发布 {{release?release:'0'}}丨粉丝 {{fans?fans:'0'}}</view>
+            <view class="banner_style">认证店铺
+        <image class="banner_style_img" src="/pages/image/zuanshi_icn.png"></image>
+            </view>
+        </view>
+        <image class="banner_backImg" src="{{details.store_img?details.store_img:'/pages/image/back.png'}}"></image>
+    </view>
+    <view wx:if="{{is_cars}}">
+        <view class="name_nav">最新上架</view>
+        <view class="shop_modle_border">
+            <view bindtap="detile" class="shop_modle" data-id="{{item.id}}" wx:for="{{cars}}" wx:for-index="indexs" wx:key="6">
+                <image class="shop_modle_img" src="{{item.img_patch}}"></image>
+                <view class="shop_modle_name">{{item.name}}</view>
+                <view class="shop_modle_num">{{item.year}} | {{item.km}}万公里</view>
+                <view class="shop_modle_price">
+                    <text class="shop_modle_price_num">{{item.price}}万</text>
+                </view>
+            </view>
+        </view>
+        <view bindtap="storetopcars" class="look_modle" wx:if="{{!scanReachBottom}}">查看更多
+      <image class="look_modle_img" src="/pages/image/youjiantou_btn.png"></image>
+        </view>
+        <view class="look_modle" wx:if="{{scanReachBottom}}">没有更多了
+    </view>
+    </view>
+    <view wx:if="{{is_cars2}}">
+        <view class="name_nav">往日推荐</view>
+        <view class="modle" wx:for="{{cars2}}" wx:for-index="indexs" wx:key="6">
+            <view class="tuijian" wx:if="{{item['top_status']}}">推荐</view>
+            <image bindtap="detile" class="modle_img" data-id="{{item.id}}" mode="aspectFill" src="{{item.img_patch}}"></image>
+            <view bindtap="detile" class="message_border" data-id="{{item.id}}">
+                <view class="modle_name">
+                    <view class="ziying" wx:if="{{item.is_vip==1}}">认证车商</view>
+                    <view class="ziying" wx:if="{{item.uid==0}}">自营</view>
+          {{item.name}} {{item.agelimit==0?'全新车':'车龄 '+item.agelimit+'年'}} {{item.exhaust}} {{item.gearbox==0?'手自一体':''}}{{item.gearbox==1?'手动档':''}}{{item.gearbox==2?'自动档':''}}</view>
+                <view class="modle_chexing"> {{item.year}} | {{item.km}}万公里
+        </view>
+                <view class="modle_price">{{item.price}}万
+        </view>
+            </view>
+        </view>
+        <view bindtap="storecars2" class="look_modle" wx:if="{{!scanReachBottom2}}">查看更多
+      <image class="look_modle_img" src="/pages/image/youjiantou_btn.png"></image>
+        </view>
+        <view class="look_modle" wx:if="{{scanReachBottom2}}">没有更多了
+    </view>
+    </view>
+    <view>
+        <view class="name_nav">服务保障</view>
+        <view class="baozhang" wx:for="{{ensure}}" wx:key="4">
+            <image class="baozhang_img" src="{{item['image']}}"></image>
+            <view class="baozhang_text">{{item['name']}}</view>
+        </view>
+    </view>
+    <view class="page_nav"></view>
+</view>
+<view wx:if="{{!details.is_member}}">
+    <view class="banner1"></view>
+    <view class="banner_modle1">
+        <view class="banner_modle_top1">
+            <image class="banner_modle_top_img1" src="{{details.head_image}}"></image>
+            <view class="banner_modle_top_title1">{{details.nickname}}</view>
+            <view class="banner_modle_top_btn1">会员</view>
+        </view>
+        <view class="banner_modle_down1">
+            <view class="banner_modle_down_modle1">
+                <view class="banner_modle_down_modle_top1">{{browse?browse:'0'}}</view>
+                <view class="banner_modle_down_modle_down1">人气</view>
+            </view>
+            <view class="banner_modle_down_border1"></view>
+            <view class="banner_modle_down_modle1">
+                <view class="banner_modle_down_modle_top1">{{release?release:'0'}}</view>
+                <view class="banner_modle_down_modle_down1">发布</view>
+            </view>
+            <view class="banner_modle_down_border1"></view>
+            <view class="banner_modle_down_modle1">
+                <view class="banner_modle_down_modle_top1">{{fans?fans:'0'}}</view>
+                <view class="banner_modle_down_modle_down1">粉丝</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="modle_border" wx:if="{{!details.is_member}}">
+    <view class="modle" wx:for="{{cars}}" wx:for-index="indexs" wx:key="6">
+        <view class="tuijian" wx:if="{{item['top_status']}}">推荐</view>
+        <image bindtap="detile" class="modle_img" data-id="{{item.id}}" mode="aspectFill" src="{{item.img_patch}}"></image>
+        <view bindtap="detile" class="message_border" data-id="{{item.id}}">
+            <view class="modle_name">
+                <view class="ziying" wx:if="{{item.is_vip==1}}">认证车商</view>
+                <view class="ziying" wx:if="{{item.uid==0}}">自营</view>
+        {{item.name}} {{item.agelimit==0?'全新车':'车龄 '+item.agelimit+'年'}} {{item.exhaust}} {{item.gearbox==0?'手自一体':''}}{{item.gearbox==1?'手动档':''}}{{item.gearbox==2?'自动档':''}}</view>
+            <view class="modle_chexing"> {{item.time}} | {{item.km}}万公里
+      </view>
+            <view class="modle_price">{{item.price}}万
+      </view>
+        </view>
+    </view>
+    <view class="end_none" wx:if="{{scanReachBottom}}">没有更多了...</view>
+</view>
+<view class="nav_nav"></view>
+<view class="btm_nav">
+    <view bindtap="shouyewdj_btn" class="btm_nav_small">
+        <image class="btm_nav_small_img" src="/pages/image/shouyewdj_btn1.png"></image>
+        <view class="btm_nav_small_title">首页</view>
+    </view>
+    <view bindtap="follow" class="btm_nav_small">
+        <image class="btm_nav_small_img" src="/pages/image/guanzhu_btn.png" wx:if="{{follow_status}}"></image>
+        <image class="btm_nav_small_img" src="/pages/image/yiguanzhu_btn.png" wx:if="{{!follow_status}}"></image>
+        <view class="btm_nav_small_title">关注</view>
+    </view>
+    <view bindtap="message" class="btm_nav_small">
+        <image class="btm_nav_small_img" src="/pages/image/liuyan_btn.png"></image>
+        <view class="btm_nav_small_title">留言</view>
+    </view>
+    <button bindtap="makephone" class="btm_nav_big_index">联系车主</button>
+    <button class="btm_nav_big_second" openType="share">立即分享</button>
+</view>

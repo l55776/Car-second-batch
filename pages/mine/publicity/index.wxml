@@ -1,0 +1,20 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<form bindreset="formReset" bindsubmit="makeimg1" reportSubmit="true" wx:if="{{!cvtype}}">
+    <view class="page_modle">
+        <view class="page_modle_top">
+            <!-- <view class="page_modle_topview"></view> -->
+            <image class="page_modle_topImg" src="{{carsimg}}"></image>
+            <!-- <image class="page_modle_topImg" src="../../image/tuiguang.jpg"></image> -->
+        </view>
+        <image class="erweima" src="{{qrcodeimg}}"></image>
+        <!-- <view class="tishi">{{qrstr}}</view> -->
+        <button class="btn" formType="submit">立即生成</button>
+    </view>
+    <view class="left_dian"></view>
+    <view class="left_dian_sec"></view>
+</form>
+<view wx:if="{{cvtype}}">
+    <canvas canvasId="show" style="margin:0 auto;width: 370px; height: 530px;background-color:#fff;"></canvas>
+    <button bindtap="makeinimg" class="btn">保存推广图片</button>
+</view>

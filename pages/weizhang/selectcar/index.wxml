@@ -1,0 +1,15 @@
+<view class="nav_border">
+    <view class="nav">
+        <image class="nav_img" src="../image/qiche_icn.png"></image>{{info.sheng}}{{info.car_num}}
+ </view>
+</view>
+<view class="text_border" wx:if="{{weizhang.length>0}}" wx:for="{{weizhang}}">
+    <view class="text_border_modle">违章时间：{{item.date}}</view>
+    <view class="text_border_modle">违章地点：{{item.wzcity}}{{item.area}}</view>
+    <view class="text_border_modle">违章行为：{{item.act}}</view>
+    <view class="text_border_modle">违章扣分：{{item.fen}}分</view>
+    <view class="text_border_modle">违章罚款：¥{{item.money}}</view>
+</view>
+<view class="text_border" wx:if="{{weizhang.length==0}}">
+    <view>暂无违章信息(*^▽^*)</view>
+</view>

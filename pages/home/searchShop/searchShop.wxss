@@ -1,0 +1,166 @@
+page {
+    background: #F0F0F0;
+    height: 100%;
+}
+
+.serch_view {
+    position: fixed;
+    width: 94%;
+    height: 68rpx;
+    padding-bottom: 20rpx;
+    padding-top: 1rpx;
+    padding-left: 3%;
+    background: white;
+    padding-right: 3%;
+    border-bottom: 1rpx solid #F0F0F0;
+}
+
+.serch_nav {
+    height: 83rpx;
+    width: 100%;
+}
+
+.serch_border {
+    height: 60rpx;
+    width: 82%;
+    margin-top: 5rpx;
+    border-radius: 100px;
+    float: left;
+    background: #f5f5f5;
+}
+
+.serch_border_img {
+    margin-top: 13rpx;
+    margin-left: 20rpx;
+    height: 38rpx;
+    padding-right: 10rpx;
+    border-right: 1rpx solid rgba(0,0,0,0.10);
+    width: 38rpx;
+    float: left;
+}
+
+.serch_border_text {
+    padding-left: 15rpx;
+    height: 60rpx;
+    float: left;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    color: #B2B2B2;
+    width: 76%;
+}
+
+.serch_border_btn {
+    height: 60rpx;
+    width: 100rpx;
+    background: #F5F5F5;
+    margin: 0rpx;
+    padding: 0rpx;
+    float: right;
+    text-align: center;
+    line-height: 58rpx;
+    border: 1rpx solid rgba(0,0,0,0.10);
+    border-radius: 10rpx;
+    font-size: 24rpx;
+    margin-top: 5rpx;
+    color: #555555;
+}
+
+button::after {
+    border: none;
+}
+
+.biaoqian_border_all {
+    width: 100%;
+    background: white;
+}
+
+.biaoqian_modle {
+    width: 94%;
+    margin-top: 10rpx;
+    margin-left: 3%;
+}
+
+.biaoqian_title {
+    height: 60rpx;
+    width: 100%;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    color: #555555;
+}
+
+.biaoqian_title_right {
+    font-size: 24rpx;
+    float: right;
+    color: #F75F5F;
+}
+
+.biaoqian_border {
+    width: 100%;
+    padding-bottom: 20rpx;
+}
+
+.biaoqian {
+    padding: 5rpx;
+    padding-left: 13rpx;
+    padding-right: 13rpx;
+    display: inline-block;
+    margin-left: 20rpx;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+    color: #555555;
+    background: #F5F5F5;
+    border-radius: 10rpx;
+}
+
+.biaoqian_nav {
+    height: 7rpx;
+    width: 100%;
+    background: #F0F0F0;
+}
+
+.mohu_border_view {
+    width: 100%;
+    background: white;
+    overflow-y: scroll;
+    height: 87%;
+    top: 92rpx;
+}
+
+.mohu_border {
+    width: 90%;
+    background: white;
+    margin-left: 5%;
+}
+
+.mohu_border_modle {
+    padding: 0;
+    margin: 0;
+    height: 88rpx;
+    width: 100%;
+    border-bottom: 1rpx solid #F0F0F0;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    color: #555555;
+    text-align: left;
+    background: #fff;
+}
+
+.mohu_border_modle_first {
+    font-size: 24rpx;
+    color: #555555;
+}
+
+.btn_active {
+    background: #ff6600;
+    color: #FFFFFF;
+    border-color: #ff6600;
+}
+
+.close_img {
+    position: fixed;
+    top: 18rpx;
+    right: 180rpx;
+    display: block;
+    height: 36rpx;
+    width: 36rpx;
+}

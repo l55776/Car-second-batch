@@ -1,0 +1,143 @@
+<!--pages/cheyuan/index.wxml-->
+<import src="/pages/template/header.wxml" />
+<template is="header" data="{{...headerdata}}" />
+
+<swiper autoplay="{{autoplay}}" class="scroll_size" duration="{{duration}}" indicatorActiveColor="#fff" indicatorDots="{{indicatorDots}}" interval="{{interval}}" lazyLoad="{{true}}">
+  <swiper-item bindtap="banner" data-id="{{item.product_id}}" data-type="{{item.type}}" wx:for="{{banner}}" wx:key="1">
+    <image class="scroll_size" mode="scaleToFill" src="{{item.img_patch}}" style="width:100%"></image>
+  </swiper-item>
+</swiper>
+
+<view class='viptuijian'>
+  <view class="serch_view">
+    <view class='serch_view_text'>
+      <text>精品批发车源</text>
+    </view>
+    <view class="serch_border_area">
+      <picker bindchange="bindRegionChange" class="serch_border_area_border" customItem="{{customItem}}" mode="region" value="{{region}}">
+        <view class="picker">
+          {{region[2]?region[2]:'全国'}}
+        </view>
+      </picker>
+      <image class="serch_border_area_img" src="../image/dingweixjt_btn.png"></image>
+    </view>
+    <view class='buju_icon' bindtap="buji_click">
+      <image src="../image/{{buju_index==0?'buju_icon0.png':'buju_icon1.png'}}"></image>
+    </view>
+  </view>
+</view>
+
+<view class="mine_border"></view>
+
+<view class="shop_view {{brand_show||active_index||sort_show?'shop_view_active':''}}">
+  <view class="nav">
+    <view bindtap="active_nav" class="nav_modle {{active_index==5?'nav_modle_active':''}}" data-active_index="5">排序
+      <image class="nav_modle_img" src="../image/{{active_index==5?'lvsejtxs_btn.png':'xiajiantou_btn.png'}}"></image>
+    </view>
+    <view bindtap="market_brand" class="nav_modle {{active_index==2?'nav_modle_active':''}}" data-active_index="2">品牌
+      <image class="nav_modle_img" src="../image/{{active_index==2?'lvsejtxs_btn.png':'xiajiantou_btn.png'}}"></image>
+    </view>
+    <view bindtap="car_yer" class="nav_modle {{active_index==3?'nav_modle_active':''}}" data-active_index="3">年限
+      <image class="nav_modle_img" src="../image/{{active_index==3?'lvsejtxs_btn.png':'xiajiantou_btn.png'}}"></image>
+    </view>
+    <view bindtap="market_class" class="nav_modle {{active_index==1?'nav_modle_active':''}}" data-active_index="1">分类
+      <image class="nav_modle_img" src="../image/{{active_index==1?'lvsejtxs_btn.png':'xiajiantou_btn.png'}}"></image>
+    </view>
+    <view bindtap="car_detail" class="nav_modle {{active_index==4?'nav_modle_active':''}}" data-active_index="4">价格
+      <image class="nav_modle_img" src="../image/{{active_index==4?'lvsejtxs_btn.png':'xiajiantou_btn.png'}}"></image>
+    </view>
+  </view>
+  <view class="choose_view">
+    <view bindtap="clone" class="choose_view_modle" data-index="{{index}}" wx:for="{{search_arr}}" wx:key="3">{{item.check_name}}
+      <image class="choose_view_modle_img" src="../image/clone.png"></image>
+    </view>
+  </view>
+  <view wx:if="{{active_index!=0&&!brand_show}}">
+    <view class="nav_fenlei">
+      <view class="nav_fenlei_modle {{car_class!=''&&active_index==1||car_km!=''&&active_index==4||car_year!=''&&active_index==3?'':'nav_fenlei_modle_active'}}">不限</view>
+      <view bindtap="carList" class="nav_fenlei_modle {{check_name==item.name||car_km==item||car_year==item?'nav_fenlei_modle_active':''}}" data-id="{{item.id}}" data-index="{{index}}" data-km="{{item}}" data-name="{{item.name}}" data-year="{{item}}" wx:for="{{car_type}}"
+        wx:key="4">
+
+        {{active_index==3?item:''}} {{active_index==4?item:''}} {{active_index!=4&&active_index!=3?item.name:''}}
+
+      </view>
+    </view>
+    <view bindtap="can_1" class="nav_fenlei_mengceng"></view>
+  </view>
+  <view wx:if="{{sort_show}}">
+    <view class="nav_fenlei">
+      <view bindtap="sort_car" class="paixu_modle  {{sort_id==index?'paixu_modle_active':''}}" data-index="{{index}}" wx:for="{{sortArr}}" wx:key="5">{{item}}
+        <image class="paixu_modle_img" src="../image/duihao_icn.png" wx:if="{{sort_id==index}}"></image>
+      </view>
+    </view>
+    <view bindtap="can_1" class="nav_fenlei_mengceng" style="background:rgba(0,0,0,0.10)"></view>
+  </view>
+  <view class="choose_area" wx:if="{{brand_show}}">
+    <view class="pinpai_over">
+      <view bindtap="carList" class="choose_area_modle" data-id="{{item.id}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{car_type}}">
+        <image class="choose_area_modle_img" src="{{item.brand_icon}}"></image>
+        <view class="choose_area_modle_title">{{item.name}}</view>
+      </view>
+    </view>
+    <view bindtap="can_1" class="nav_fenlei_mengceng"></view>
+  </view>
+  <view class="shop_border">
+    <view class="shop_modle {{buju_index==0?'shop_modle_0':'shop_modle_1'}}" hidden="{{plate_type!=1}}" wx:for="{{carList}}" wx:for-index="indexs" wx:key="6">
+      <view class="shop_modle_box" bindtap="detile" data-id="{{item.id}}">
+        <scroll-view class="solid_modle_scroll" scrollX="true">
+          <view class="solid_modle_scroll_modle" wx:for="{{item['image']}}" wx:key="v">
+            <image class="solid_modle_scroll_modle_img" data-index="{{indexs}}" data-src="{{item.img_patch}}" mode="scaleToFill" src="{{item.img_patch}}"></image>
+          </view>
+        </scroll-view>
+
+        <wxs src="../../wxs/one_classify.wxs" module="one_classify"/> 
+        <!-- 获取车的二级分类 -->
+        <wxs src="../../wxs/two_classify.wxs" module="two_classify"/>
+         <!-- 三级分类 -->
+        <wxs src="../../wxs/three_classify.wxs" module="three_classify" />
+
+        <view class="shop_modle_message">
+          <!-- 一级分类 -->
+          <view class="shop_modle_title">
+            {{one_classify.setbrand(item,brand)}}<text>{{two_classify.setbrand(item,brand)}}</text>
+          </view>
+          <!-- <view class='shop_modle_peizhi'>
+            <text>{{item.name}}</text>
+          </view> -->
+          <view class='shop_modle_peizhi'>
+            {{three_classify.setbrand(item,brand)}}
+          </view>
+          <view class="shop_modle_xinxi">
+            <text style='display:block'>{{item.timestr}}</text>
+            <text>{{item.agelimit==0?'全新车':''+item.agelimit+'年'}} | {{item.km}}万公里  {{item.city}}</text>
+          </view>
+          <view class="shop_mode_jiage">
+            <text class="shop_mode_jiage1">批发价:</text>
+            <text class="shop_mode_jiage2">{{item.price}}</text>
+            <text class="shop_mode_jiage3">在售</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="modle" hidden="{{plate_type!=2}}" wx:for="{{carList}}" wx:for-index="indexs" wx:key="6">
+      <view class="tuijian" wx:if="{{item['top_status']}}">推荐</view>
+      <image bindtap="detile" class="modle_img" data-id="{{item.id}}" mode="aspectFill" src="{{item.carimg}}"></image>
+      <view bindtap="detile" class="message_border" data-id="{{item.id}}">
+        <view class="modle_name">
+          <view class="ziying" wx:if="{{item.is_vip==1}}">认证车商</view>
+          <view class="ziying" wx:if="{{item.uid==0}}">自营</view>
+          {{item.name}} {{item.agelimit==0?'全新车':'车龄 '+item.agelimit+'年'}} {{item.exhaust}} {{item.gearbox==0?'手自一体':''}}{{item.gearbox==1?'手动档':''}}{{item.gearbox==2?'自动档':''}}</view>
+        <view class="modle_chexing"> {{item.year}} | {{item.km}}万公里
+          <text style="float:right" wx:if="{{item.y>0&&item.x>0&&latitude>0&&longitude>0}}">{{item.distance}}km</text>
+        </view>
+        <view class="modle_price">{{item.price}}万
+        </view>
+      </view>
+    </view>
+    <view class="end_none" wx:if="{{scanReachBottom}}">没有更多了...</view>
+    <view class="btm_nav"></view>
+    <view class='ad-container'>
+      <image src='https://www.chemiaopi.com/attachment/images/5/2019/07/pvllELb4535jOB8BOb37iG2vZE6ooL.jpg' />
+    </view>
+  </view>
+</view>

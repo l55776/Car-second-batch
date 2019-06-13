@@ -1,0 +1,278 @@
+@import "../../alert/index.wxss";
+
+.xiaoxi {
+    height: 88rpx;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1rpx;
+    display: block;
+    background: #ff6600;
+    border-bottom: 20rpx solid #f9f9f9;
+}
+
+.text_area {
+    width: 650rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    height: 288rpx;
+    font-size: 24rpx;
+    color: #555555;
+    padding-top: 20rpx;
+    margin: 0 auto;
+    display: block;
+    background: #F0F0F0;
+    border-radius: 10rpx;
+    padding-bottom: 20rpx;
+}
+
+.xiaoxi_leftImg {
+    padding-right: 15rpx;
+    padding-left: 30rpx;
+    float: left;
+    height: 40rpx;
+    margin-top: 24rpx;
+    width: 40rpx;
+}
+
+.xiaoxi_right_btn {
+    position: absolute;
+    right: 20rpx;
+    height: 45rpx;
+    width: 100rpx;
+    border: 1px solid #fff;
+    margin-top: 21.5rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 45rpx;
+    font-size: 24rpx;
+    color: #fff;
+    border-radius: 5rpx;
+}
+
+.show_diandian {
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.update_scroll_modle {
+    position: relative;
+    z-index: 15;
+    width: 505rpx;
+    height: 88rpx;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    line-height: 88rpx;
+    padding-right: 150rpx;
+    font-size: 28rpx;
+    color: #FFFFFF;
+}
+
+.modle {
+    width: 90%;
+    margin-left: 5%;
+    height: 88rpx;
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 88rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.modle_right {
+    color: #9295A8;
+    font-size: 24rpx;
+    display: block;
+    height: 88rpx;
+    padding: 0;
+    width: 250rpx;
+    margin: 0;
+    text-align: right;
+    float: right;
+}
+
+.modle_choose {
+    color: #9295A8;
+    width: 150rpx;
+    font-size: 24rpx;
+    display: block;
+    height: 88rpx;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    float: right;
+}
+
+.modle_choose_img {
+    height: 30rpx;
+    padding-left: 20rpx;
+    width: 30rpx;
+    vertical-align: middle;
+}
+
+.modle_btn {
+    margin: 0;
+    padding: 0;
+    height: 48rpx;
+    width: 120rpx;
+    float: right;
+    margin-top: 21.5rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 46rpx;
+    background: #fff;
+    font-size: 24rpx;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 8rpx;
+}
+
+button::after {
+    border: none;
+}
+
+.shangchuan_view {
+    height: 165rpx;
+    width: 165rpx;
+    margin-left: 19rpx;
+    display: inline-block;
+    margin-top: 20rpx;
+}
+
+.shangchuan_Img {
+    position: absolute;
+    height: 165rpx;
+    width: 165rpx;
+}
+
+.shangchuan_Img_close {
+    float: right;
+    height: 38rpx;
+    z-index: 5;
+    position: relative;
+    width: 38rpx;
+}
+
+.bufa_btn {
+    background: #ff6600;
+    border-radius: 15rpx;
+    height: 72rpx;
+    width: 690rpx;
+    margin: 0 auto;
+    margin-top: 40rpx;
+    display: block;
+    text-align: center;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    line-height: 72rpx;
+}
+
+.jinggao {
+    font-size: 24rpx;
+    color: #9295A8;
+    width: 100%;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+.must_red {
+    color: red;
+}
+
+.textarea_text {
+    position: relative;
+    z-index: 1000;
+    width: 650rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    height: 310rpx;
+    margin: 0 auto;
+    margin-top: -310rpx;
+    font-size: 24rpx;
+    color: #888888;
+}
+
+.textarea_text_active {
+    color: #333;
+}
+
+.dizhi_area {
+    width: 385rpx;
+    margin-top: 18rpx;
+    color: #9295A8;
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    line-height: 50rpx;
+    display: inline-block;
+    height: 110rpx;
+}
+
+.car_messageView {
+    width: 690rpx;
+    margin: 0 auto;
+    height: 88rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.car_messageView_input {
+    width: 600rpx;
+    float: left;
+    height: 88rpx;
+    color: #333;
+    font-size: 24rpx;
+}
+
+.car_messageView_sc {
+    width: 90rpx;
+    float: left;
+    font-size: 24rpx;
+    color: #F75F5F;
+    text-align: right;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+
+.shangchuan_view_border {
+    width: 100%;
+    margin-top: -15rpx;
+}
+
+.kefu_modle {
+    position: fixed;
+    top: 70rpx;
+    padding: 0;
+    width: 150rpx;
+    background: #fff;
+    margin: 0;
+    right: 10rpx;
+    z-index: 999;
+}
+
+.kefu_modle_img {
+    height: 100rpx;
+    background: #fff;
+    border-radius: 100%;
+    margin: 0 auto;
+    display: block;
+    width: 100rpx;
+}
+
+.kefu_modle_title {
+    width: 100%;
+    font-size: 27rpx;
+    color: #666666;
+    text-align: center;
+    line-height: 80rpx;
+}
+
+button::after {
+    border: none;
+}
+
+.btm_input {
+    width: 340rpx;
+    position: absolute;
+    right: 180rpx;
+}

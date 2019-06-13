@@ -1,0 +1,102 @@
+page {
+    background: #f9f9f9;
+}
+
+.banner {
+    height: 154rpx;
+    padding-top: 1rpx;
+    width: 100%;
+    background: #FB9145;
+}
+
+.banner_top {
+    font-size: 34rpx;
+    color: #FFFFFF;
+    width: 50%;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50rpx;
+    margin-top: 25rpx;
+}
+
+.banner_btm {
+    font-size: 26rpx;
+    color: #FFFFFF;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.banner_border {
+    background: #f0f0f0;
+    height: 50rpx;
+    width: 1rpx;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50rpx;
+}
+
+.modle {
+    margin-top: 20rpx;
+    background: #fff;
+    padding: 33rpx 30rpx 20rpx 30rpx;
+}
+
+.modle_shop {
+    width: 100%;
+    padding-bottom: 17rpx;
+    height: 100rpx;
+    border-bottom: 1rpx solid #f9f9f9;
+}
+
+.modle_headImg {
+    height: 100rpx;
+    float: left;
+    width: 100rpx;
+    border-radius: 100%;
+    background: #e0e0e0;
+}
+
+.modle_textView {
+    height: 100rpx;
+    float: left;
+    width: 570rpx;
+    margin-left: 20rpx;
+}
+
+.modle_textView_top {
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 50rpx;
+    width: 100%;
+}
+
+.modle_textView_top_right {
+    font-size: 28rpx;
+    color: #7A7A7A;
+    float: right;
+}
+
+.modle_textView_bottom {
+    font-size: 24rpx;
+    color: #7A7A7A;
+    line-height: 50rpx;
+    width: 100%;
+}
+
+.modle_bottomText {
+    font-size: 24rpx;
+    color: #7A7A7A;
+    text-align: right;
+    margin-top: 20rpx;
+    line-height: 34rpx;
+}
+
+.modle_bottomText_num {
+    font-size: 34rpx;
+    color: #F48080;
+}

@@ -1,0 +1,69 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view>
+    <view class="banner"></view>
+    <view class="banner_modle">
+        <view class="banner_modle_top">
+            <image class="banner_modle_top_img" src="{{detail.user.head_image?detail.user.head_image:memberInfo.avatar}}"></image>
+            <view class="banner_modle_top_title">{{memberInfo.nickname}}
+             
+            </view>
+            <view bindtap="binding" class="banner_modle_top_btn">提现</view>
+        </view>
+        <view class="banner_modle_down">
+            <navigator class="banner_modle_down_modle" url="/pages/mine/yongjinjilu/yongjinjilu">
+                <view class="banner_modle_down_modle_top">{{total.brokerage}}</view>
+                <view class="banner_modle_down_modle_down">总佣金</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/mine/yongjinjilu/yongjinjilu">
+                <view class="banner_modle_down_modle_top">{{total.withdraw}}</view>
+                <view class="banner_modle_down_modle_down">已提现</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/mine/tixian/tixian">
+                <view class="banner_modle_down_modle_top">{{total.brokerage-total.withdraw}}</view>
+                <view class="banner_modle_down_modle_down">可提现</view>
+            </navigator>
+            <view class="banner_modle_down_border"></view>
+            <navigator class="banner_modle_down_modle" url="/pages/mine/fensi/fensi">
+                <view class="banner_modle_down_modle_top">{{total.number}}</view>
+                <view class="banner_modle_down_modle_down">推广人数</view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<navigator class="choose_view" style="margin-top:20rpx;" url="/pages/mine/yongjinjilu/yongjinjilu">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="/pages/image/yongjin.png"></image>佣金记录
+        <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+        <text class="choose_view_modle_num"></text>
+    </view>
+</navigator>
+<navigator class="choose_view" url="/pages/mine/fensi/fensi">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="/pages/image/tuiguang.png"></image>推广记录
+        <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+        <text class="choose_view_modle_num"></text>
+    </view>
+</navigator>
+<navigator class="choose_view" url="/pages/mine/tixianjilu/tixianjilu">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="/pages/image/tuiguang.png"></image>提现明细
+        <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+        <text class="choose_view_modle_num"></text>
+    </view>
+</navigator>
+<view bindtap="retopublicity" class="choose_view">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="/pages/image/fcode.png"></image>我的推广码
+        <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image>
+    </view>
+</view>
+<view class="choose_view">
+    <view class="choose_view_modle">
+        <image class="choose_view_modle_img" src="/pages/image/fcode.png"></image>推广文本
+        <!-- <image class="choose_view_modle_backImg" src="/pages/image/jiantou_btn.png"></image> -->
+        <view class="choose_view_modle_right" bind:tap="mine_copy">点击复制</view>
+    </view>
+</view>

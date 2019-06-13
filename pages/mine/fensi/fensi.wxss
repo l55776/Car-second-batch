@@ -1,0 +1,76 @@
+.modle {
+    height: 100rpx;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1rpx solid #f9f9f9;
+}
+
+.modle_img {
+    height: 100rpx;
+    width: 100rpx;
+    border-radius: 100%;
+    float: left;
+}
+
+.modle_title {
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30rpx;
+    margin-top: 12rpx;
+    color: #333333;
+    width: 50%;
+    float: left;
+    margin-left: 23rpx;
+}
+
+.modle_time {
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: #7A7A7A;
+    width: 50%;
+    float: left;
+    margin-left: 23rpx;
+}
+
+.modle_btn {
+    background: #ff6600;
+    width: 150rpx;
+    background: rgba(251,145,69,0.05);
+    border: 1px solid #FB9145;
+    border-radius: 100rpx;
+    height: 54rpx;
+    text-align: center;
+    line-height: 54rpx;
+    float: right;
+    font-size: 24rpx;
+    color: #FB9145;
+    margin-top: -34rpx;
+}
+
+.modle_btn_no {
+    background: #d0d0d0;
+    width: 100rpx;
+    height: 54rpx;
+    text-align: center;
+    line-height: 54rpx;
+    float: right;
+    font-size: 28rpx;
+    margin-top: 25rpx;
+    color: #FFFFFF;
+    border-radius: 10rpx;
+}
+
+.choose_view_modle_img {
+    height: 40rpx;
+    margin-top: -5rpx;
+    width: 40rpx;
+    vertical-align: middle;
+}

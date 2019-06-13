@@ -1,0 +1,108 @@
+{
+  "pages": [
+    "pages/saledetail/index",
+    "pages/index/index",
+    "pages/saleindex/index",
+    "pages/cheyuan/index",
+    "pages/sale_fast/index",
+    "pages/sale/index",
+    "pages/mine/index",
+    "pages/fensi/fensi",
+    "pages/mine/info/index",
+    "pages/mine/payorder/index",
+    "pages/mine/sale/index",
+    "pages/mine/sale1/index",
+    "pages/mine/publicity/index",
+    "pages/mine/fensi/fensi",
+    "pages/mine/tixian/tixian",
+    "pages/mine/tixianjilu/tixianjilu",
+    "pages/mine/yongjinjilu/yongjinjilu",
+    "pages/selectscards/index",
+    "pages/store/index",
+    "pages/alert/index",
+    "pages/publicity/index",
+    "pages/salelist/index",
+
+    "pages/home/index/index",
+    "pages/home/carMessage/carMessage",
+    "pages/home/searchShop/searchShop",
+    "pages/dting/index",
+    "pages/enter/enter",
+    "pages/collection/index",
+    "pages/home/jubao/jubao",
+    "pages/home/liuyan/liuyan",
+    "pages/space/index",
+    "pages/gujia/index",
+    "pages/loan/index",
+    "pages/weizhang/weizhang",
+    "pages/weizhang/add/index",
+    "pages/weizhang/selectcar/index",
+    "pages/home/poster/index",
+    "pages/part/apply/index",
+    "pages/part/order/index",
+    "pages/part/pay/index",
+    "pages/release/index",
+    "pages/vip/index",
+    "pages/deposit/index",
+    "pages/vipresult/index",
+    "pages/integral/integral"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f44b52",
+    "navigationBarTitleText": "二手汽车",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#ff0",
+    "borderStyle": "black",
+    "backgroundColor": "#f44b52",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/image/shouyewdj_btn.png",
+        "selectedIconPath": "pages/image/shouyedj_btn.png"
+      },
+      {
+        "text": "求购",
+        "pagePath": "pages/gujia/index",
+        "iconPath": "pages/image/shouchewdj_btn.png",
+        "selectedIconPath": "pages/image/shouchedj_btn.png"
+      },
+      {
+        "text": "发布",
+        "pagePath": "pages/sale/index",
+        "iconPath": "pages/image/release_btn.png",
+        "selectedIconPath": "pages/image/release_s_btn.png"
+      },
+      {
+        "text": "VIP",
+        "pagePath": "pages/mine/sale1/index",
+        "iconPath": "pages/image/vipicon_btn.png",
+        "selectedIconPath": "pages/image/vipicon_s_btn.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/index",
+        "iconPath": "pages/image/wodewdj_btn.png",
+        "selectedIconPath": "pages/image/wodedj_btn.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

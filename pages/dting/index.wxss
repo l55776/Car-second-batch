@@ -1,0 +1,47 @@
+page {
+    background: #f9f9f9;
+}
+
+.tanchu_miaoshu_border {
+    width: 90%;
+    background: #fff;
+    box-shadow: 8rpx 8rpx 8rpx #D0D0D0;
+    border-radius: 10rpx;
+    padding-top: 10rpx;
+    margin-top: 20rpx;
+    padding-bottom: 30rpx;
+    margin-left: 5%;
+}
+
+.miaoshu_border_title {
+    color: #333;
+    font-size: 30rpx;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5rpx;
+}
+
+.tanchu_miaoshu_border_right {
+    width: 90%;
+    margin-left: 8%;
+    margin-top: 30rpx;
+    font-size: 28rpx;
+    color: #555555;
+}
+
+.tanchu_miaoshu_border_dian {
+    margin-left: -50rpx;
+    position: absolute;
+    margin-top: -3rpx;
+    height: 45rpx;
+    width: 45rpx;
+}
+
+.tanchu_miaoshu_border_right_active {
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

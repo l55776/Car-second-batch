@@ -1,0 +1,118 @@
+page {
+}
+
+.wsy_index_max {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.wsy_index_scroll {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1rpx solid #8a8a8a;
+}
+
+.scroll-view-item {
+  width: 100%;
+  height: auto;
+}
+
+.wsy_cars_for_title {
+  width: 95%;
+  padding-left: 5%;
+  height: 50rpx;
+  color: #8a8a8a;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  font-weight: blod;
+  background-color: #f0f0f0;
+}
+
+.wsy_cars_for_detail {
+  height: 80rpx;
+  margin-left:20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.wsy_cars_for_img {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 5rpx;
+  float: left;
+}
+
+.wsy_cars_for_name {
+  display: inline-block;
+  font-size: 30rpx;
+  font-color: #8a8a8a;
+  vertical-align: middle;
+  margin-top: 20rpx;
+  margin-left: 8rpx;
+}
+
+.wsy_cars_for_name-3 {
+  font-size: 25rpx;
+  padding-right:230rpx;
+}
+
+.wsy_cars_abc_list_max {
+  position: fixed;
+  top: 50%;
+  right: 10rpx;
+  transform: translate(0, -50%);
+  background-color: #fff;
+  border-radius: 999rpx;
+  padding: 10rpx;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.wsy_cars_abc_list {
+  font-size: 26rpx;
+  font-color: #8a8a8a;
+  margin: 10rpx auto;
+}
+
+/* 二级 */
+
+.yc-container2 {
+  position: fixed;
+  top: 65px;
+  right: -100%;
+  z-index: 60;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+.shade2 {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 59;
+  opacity: 0.5;
+}
+
+/* 三级 */
+
+.yc-container3 {
+  position: fixed;
+  top: 65px;
+  right: -100%;
+  z-index: 80;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+.shade3 {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 79;
+  opacity: 0.5;
+}

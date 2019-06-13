@@ -1,0 +1,129 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="modle_1_nav">
+    <view bindtap="ActiveClick" class="modle_1_nav_modle {{activeIndex==index?'modle_1_nav_active':''}}" data-index="{{index}}" style="width:{{nav_width}}%" wx:for="{{table}}">{{item}}
+    <view class="modle_1_nav_modle_border" wx:if="{{activeIndex==index}}"></view>
+    </view>
+</view>
+<view class="nav"></view>
+<view class="shop_border" wx:if="{{activeIndex==1}}" wx:for="{{orderList}}">
+    <view class="shop_modle">
+        <image class="shop_modle_img" src="{{item.part_img}}"></image>
+        <view class="shop_modle_name">{{item.part_name}}</view>
+        <text class="shop_modle_daibaojia">待报价</text>
+        <view class="shop_modle_orderTime">订购时间：{{item.create_time}}</view>
+    </view>
+    <view class="shop_modle_btmNav" style="margin-top:30rpx;">
+        <view class="shop_modle_btmNav_img"></view>
+    类型：{{item.part_type}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    年份：{{item.car_year}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    车型：{{item.car_type}}
+  </view>
+</view>
+<view class="shop_border" wx:if="{{activeIndex==2}}" wx:for="{{orderList}}">
+    <view class="shop_modle">
+        <image class="shop_modle_img" src="{{item.part_img}}"></image>
+        <view class="shop_modle_name">{{item.part_name}}</view>
+        <text class="shop_modle_daibaojia">待付款</text>
+        <view class="shop_modle_orderNumber">订单号：{{item.order_sn}}</view>
+        <view class="shop_modle_orderTime">报价：
+      <text class="shop_modle_orderbaojia">￥{{item.part_price}}</text>
+        </view>
+        <button bindtap="goPay" class="shop_modle_btn" data-id="{{item.id}}">去付款</button>
+    </view>
+    <view class="shop_modle_btmNav" style="margin-top:30rpx;">
+        <view class="shop_modle_btmNav_img"></view>
+    类型：{{item.part_type}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    年份：{{item.car_year}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    车型：{{item.car_type}}
+  </view>
+</view>
+<view class="shop_border" wx:if="{{activeIndex==3}}" wx:for="{{orderList}}">
+    <view class="shop_modle">
+        <image class="shop_modle_img" src="{{item.part_img}}"></image>
+        <view class="shop_modle_name">{{item.part_name}}</view>
+        <text class="shop_modle_daibaojia">待发货</text>
+        <view class="shop_modle_orderNumber">订单号：{{item.order_sn}}</view>
+        <view class="shop_modle_orderTime">报价：
+      <text class="shop_modle_orderbaojia">￥{{item.part_price}}</text>
+        </view>
+    </view>
+    <view class="shop_modle_btmNav" style="margin-top:30rpx;">
+        <view class="shop_modle_btmNav_img"></view>
+    类型：{{item.part_type}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    年份：{{item.car_year}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    车型：{{item.car_type}}
+  </view>
+</view>
+<view class="shop_border" wx:if="{{activeIndex==4}}" wx:for="{{orderList}}">
+    <view class="shop_modle">
+        <image class="shop_modle_img" src="{{item.part_img}}"></image>
+        <view class="shop_modle_name">{{item.part_name}}</view>
+        <text class="shop_modle_daibaojia">待发货</text>
+        <view class="shop_modle_orderNumber">运单号：{{item.express_name}} / {{item.waybill_sn}}</view>
+        <view class="shop_modle_orderTime">报价：
+      <text class="shop_modle_orderbaojia">￥{{item.part_price}}</text>
+        </view>
+        <button bindtap="confirmOrder" class="shop_modle_btn" data-id="{{item.id}}">确认收货</button>
+    </view>
+    <view class="shop_modle_btmNav" style="margin-top:30rpx;">
+        <view class="shop_modle_btmNav_img"></view>
+    类型：{{item.part_type}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    年份：{{item.car_year}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    车型：{{item.car_type}}
+  </view>
+</view>
+<view class="shop_border" wx:if="{{activeIndex==5}}" wx:for="{{orderList}}">
+    <view class="shop_modle">
+        <image class="shop_modle_img" src="{{item.part_img}}"></image>
+        <view class="shop_modle_name">{{item.part_name}}</view>
+        <text class="shop_modle_daibaojia shop_modle_wancheng">已完成</text>
+        <view class="shop_modle_orderNumber">订单号：{{item.express_name}} / {{item.waybill_sn}}</view>
+        <view class="shop_modle_orderTime">报价：
+      <text class="shop_modle_orderbaojia">￥{{item.part_price}}</text>
+        </view>
+    </view>
+    <view class="shop_modle_btmNav" style="margin-top:30rpx;">
+        <view class="shop_modle_btmNav_img"></view>
+    类型：{{item.part_type}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    年份：{{item.car_year}}
+  </view>
+    <view class="shop_modle_btmNav">
+        <view class="shop_modle_btmNav_img"></view>
+    车型：{{item.car_type}}
+  </view>
+</view>
+<view class="end_none" wx:if="{{orderList.length>0&&isLast}}">没有更多了...</view>
+<block wx:if="{{orderList.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:'暂无查看数据'}}"></template>
+    </view>
+</block>

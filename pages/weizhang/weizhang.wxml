@@ -1,0 +1,14 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="nav_border">
+    <view class="nav" wx:if="{{list.length>0}}" wx:for="{{list}}">
+        <view bindtap="selectcar" data-id="{{item.id}}" style="width:400rpx;float:left">
+            <image class="nav_img" src="../image/qiche_icn.png"></image>
+  {{item.sheng}}{{item.car_num}}</view>
+        <text bindtap="editcar" class="nav_xiugai" data-id="{{item.id}}">修改</text>
+    </view>
+</view>
+<view class="nav_tishiText">剩余可查询次数{{weizhang_num}}次，
+<text bindtap="paynum" class="nav_tishiText_color">【点击充值】</text>
+10次</view>
+<button bindtap="addcar" class="btm_btn">添加车辆</button>

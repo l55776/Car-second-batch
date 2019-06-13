@@ -1,0 +1,22 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="bottom_border">
+    <view class="bottom_border_title">认证店铺</view>
+    <view bindtap="changeenter" class="bottom_border_title_view" data-classid="{{detail.id}}">
+        <view class="bottom_border_title_view_index">{{detail.cycle}}天</view>
+        <view class="bottom_border_title_view_index">{{detail.price}}元</view>
+        <view class="bottom_border_title_view_last">
+            <image class="bottom_border_title_view_last_img" src="/pages/image/xuanze_btn.png"></image>
+        </view>
+    </view>
+    <button bindtap="gopay" class="bottom_border_btn" data-id="{{detail.id}}">确认支付</button>
+</view>
+<view class="jieshao_border">
+    <!-- <view class="jieshao_view">1.认证店铺发布车辆信息免费</view>
+    <view class="jieshao_view">2.认证店铺尊享vip店铺页面</view>
+    <view class="jieshao_view">3.认证店铺可自定义店铺封面及店铺logo</view> -->
+    <view class="jieshao_view">充值会员 加入车秒批，（邀请好友一起。加入一位同行，可返100元现金红包）</view>
+    <view class="jieshao_view">10万车商大联盟，百万车源供选择，平台引进全国各地资深的批发车商团队，很多个人一手 4S店置换车源 拿车价格精确到百，车况描述精准到漆，车辆周期基本秒批，也许你是刚入行资金紧缺，只想拿车零售的新车商。或者你是资源充足，人脉广泛，主打批车薄利多销的老车商。平台所有车源都经过人工筛选，全部批发价格:合作共赢，这里有你想要的全部.....</view>
+    <view class="jieshao_view">平台作用:解决卖不动的车商库存太久，好卖的
+车商收车困难，不诚信的车商骗定金，车况虚报白跑路等问题: 平台担保，让车商与车商之间的交易更高效，安全，快捷:</view>
+</view>

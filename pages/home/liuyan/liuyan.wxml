@@ -1,0 +1,26 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view wx:if="{{carList.length>0}}">
+    <view class="modle_border">
+        <view class="modle_view" wx:for="{{carList}}" wx:key="1">
+            <view class="modle_jiantou"></view>
+            <view class="modle_dian"></view>
+            <view class="modle_view_title">时间：{{item.time}}</view>
+            <view class="modle_view_name">昵称：{{item.nickname}}</view>
+            <view class="modle_view_text  {{item.length==3?'modle_view_text_overflow':''}}">{{item.content}}</view>
+            <view bindtap="open" class="modle_view_more" data-index="{{index}}" wx:if="{{item.length==3}}">展开
+                <image class="modle_view_more_img" src="../../image/lvsejtxx_btn.png"></image>
+            </view>
+            <view bindtap="clone" class="modle_view_more" data-index="{{index}}" wx:if="{{item.length==4}}">收起
+                <image class="modle_view_more_img" src="../../image/lvsejtxx_btn.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="zhezhao"></view>
+</view>
+<block wx:else>
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:title}}"></template>
+    </view>
+</block>

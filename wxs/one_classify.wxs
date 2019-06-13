@@ -1,0 +1,10 @@
+function setbrand(item, brand) {
+  var currentBrand = '';
+  brand.forEach(function(current) {
+    if (item.brand === current.id) {
+      currentBrand = current.name;
+    }
+  })
+  return currentBrand;
+}
+module.exports.setbrand = setbrand;

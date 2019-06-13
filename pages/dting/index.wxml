@@ -1,0 +1,15 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view bindtap="showindexdesc" class="tanchu_miaoshu_border" data-id="{{item.id}}" wx:if="{{notices.length>0}}" wx:for="{{notices}}" wx:key="notices">
+    <view class="tanchu_miaoshu_border_right {{clicknotice==item.id?'':'tanchu_miaoshu_border_right_active'}}">
+        <image class="tanchu_miaoshu_border_dian" src="/pages/image/xiaoxi_btn.png"></image>
+        <view class="miaoshu_border_title">{{item.content?item.content:''}}</view>
+        <text>  {{item.desc?item.desc:''}}</text>
+    </view>
+</view>
+<block wx:if="{{notices.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:'暂无公告数据'}}"></template>
+    </view>
+</block>

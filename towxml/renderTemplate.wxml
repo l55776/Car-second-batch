@@ -1,0 +1,930 @@
+<template name="m9">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m8">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m9" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m7">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m8" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m6">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m7" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m5">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m6" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m4">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m5" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m3">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m4" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m2">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m3" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m1">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m2" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>
+<template name="m0">
+    <block wx:if="{{item.node==='text'}}">{{item.text}}</block>
+    <view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='view'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </view>
+    <video class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='video'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </video>
+    <swiper class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper>
+    <block wx:if="{{item.node==='element'&&item.tag==='block'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </block>
+    <swiper-item class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='swiper-item'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </swiper-item>
+    <button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='button'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </button>
+    <slider class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='slider'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </slider>
+    <scroll-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='scroll-view'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </scroll-view>
+    <movable-area class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-area'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-area>
+    <movable-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='movable-view'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </movable-view>
+    <text class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='text'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </text>
+    <progress class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='progress'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </progress>
+    <checkbox-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox-group'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox-group>
+    <label class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='label'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </label>
+    <checkbox class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='checkbox'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </checkbox>
+    <form class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='form'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </form>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <input class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='input'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </input>
+    <radio-group class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio-group'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio-group>
+    <radio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='radio'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </radio>
+    <picker class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker>
+    <picker-view class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='picker-view'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </picker-view>
+    <switch class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='switch'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </switch>
+    <textarea class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='textarea'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </textarea>
+    <navigator class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='navigator'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </navigator>
+    <audio class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='audio'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </audio>
+    <image class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" mode="widthFix" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='image'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </image>
+    <map class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='map'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </map>
+    <canvas class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='canvas'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </canvas>
+    <contact-button class="{{item.attr.className}}" data="{{item.attr.data}}" height="{{item.attr.height}}" id="{{item.attr.id}}" src="{{item.attr.src}}" style="{{item.attr.style}}" width="{{item.attr.width}}" wx:if="{{item.node==='element'&&item.tag==='contact-button'}}">
+        <template is="m1" data="{{item:item}}" wx:for="{{item.child}}" wx:key="{{item}}"></template>
+    </contact-button>
+</template>

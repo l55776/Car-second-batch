@@ -1,0 +1,10 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+
+<image class="banner" mode="scaleToFill" src="{{saleinfo['sale_logo']}}"></image>
+<view bindtap="saletap" class="sell_btn" wx:if="{{saleinfo['upload']==1}}">立即卖车</view>
+<view bindtap="block_click" class="zixun_btn">免费咨询</view>
+<view bindtap="gujia" class="zixun_gujia">爱车估价</view>
+<view class="guanggao_view" wx:if="{{unitid!=123}}">
+    <ad unitId="{{unitid}}"></ad>
+</view>

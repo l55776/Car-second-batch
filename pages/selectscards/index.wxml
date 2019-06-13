@@ -1,0 +1,50 @@
+<import src="/pages/template/header.wxml" />
+<template is="header" data="{{...headerdata}}" />
+
+<view class="wsy_index_max">
+  <scroll-view class="wsy_index_scroll" scrollIntoView="nav-{{toabc}}" scrollTop="0rpx" scrollY="true" style="height:{{max_height}}px">
+    <view class="scroll-view-item bc_green" id="nav-{{abc}}" wx:if="{{item_max.length>0}}" wx:for="{{classes}}" wx:for-index="abc" wx:for-item="item_max" wx:key="abc">
+      <view class="wsy_cars_for_title">{{abc}}</view>
+      <view bindtap="onPop2" class="wsy_cars_for_detail" data-ids="{{items.id}}" data-name="{{items.name}}" wx:for="{{item_max}}" wx:for-item="items" wx:key="cars">
+        <image class="wsy_cars_for_img" src="{{items.brand_icon}}"></image>
+        <view class="wsy_cars_for_name">{{items.name}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="wsy_cars_abc_list_max">
+    <view bindtap="retoabc" class="wsy_cars_abc_list" data-abc="{{index}}" wx:for="{{classes}}">{{index}}</view>
+  </view>
+</view>
+<view class="shade2" bind:tap="onPop2" hidden='{{!pop2open}}'></view>
+
+
+<view class="wsy_index_max yc-container2" style="{{pop2style}}">
+  <scroll-view class="wsy_index_scroll" scrollIntoView="nav-{{toabc}}" scrollTop="0rpx" scrollY="true" style="height:{{max_height}}px">
+    <view class="scroll-view-item bc_green" id="nav-{{abc}}" wx:if="{{item_max.length>0}}" wx:for="{{classes2}}" wx:for-index="abc" wx:for-item="item_max" wx:key="abc">
+      <view class="wsy_cars_for_title">{{abc}}</view>
+      <view bindtap="onPop3" class="wsy_cars_for_detail" data-ids="{{items.id}}" data-name="{{items.name}}" wx:for="{{item_max}}" wx:for-item="items" wx:key="cars">
+        <!-- <image class="wsy_cars_for_img" src="{{items.brand_icon}}"></image> -->
+        <view class="wsy_cars_for_name">{{items.name}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="wsy_cars_abc_list_max">
+    <view bindtap="retoabc" class="wsy_cars_abc_list" data-abc="{{index}}" wx:for="{{classes2}}">{{index}}</view>
+  </view>
+</view>
+<view class="shade3"  bind:tap="onPop3" hidden='{{!pop3open}}'></view>
+
+<view class="wsy_index_max yc-container3" style="{{pop3style}}">
+  <scroll-view class="wsy_index_scroll" scrollIntoView="nav-{{toabc}}" scrollTop="0rpx" scrollY="true" style="height:{{max_height}}px">
+    <view class="scroll-view-item bc_green" id="nav-{{abc}}" wx:if="{{item_max.length>0}}" wx:for="{{classes3}}" wx:for-index="abc" wx:for-item="item_max" wx:key="abc">
+      <view class="wsy_cars_for_title">{{abc}}</view>
+      <view bindtap="backid" class="wsy_cars_for_detail" data-ids="{{items.id}}" data-name="{{items.name}}" wx:for="{{item_max}}" wx:for-item="items" wx:key="cars">
+        <!-- <image class="wsy_cars_for_img" src="{{items.brand_icon}}"></image> -->
+        <view class="wsy_cars_for_name wsy_cars_for_name-3">{{items.name}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="wsy_cars_abc_list_max">
+    <view bindtap="retoabc" class="wsy_cars_abc_list" data-abc="{{index}}" wx:for="{{classes3}}">{{index}}</view>
+  </view>
+</view>

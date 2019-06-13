@@ -1,0 +1,77 @@
+page {
+    background: #f9f9f9;
+}
+
+.mengceng1 {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    position: absolute;
+    width: 180rpx;
+    height: 180rpx;
+    line-height: 180rpx;
+    text-align: center;
+}
+
+.nones {
+    display: none;
+}
+
+.modle_border {
+    width: 100%;
+    background: #fff;
+}
+
+.modle {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    height: 180rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.modle_img {
+    height: 180rpx;
+    width: 180rpx;
+    float: left;
+}
+
+.modle_name {
+    font-size: 30rpx;
+    color: #333333;
+    padding-left: 25rpx;
+    width: 470rpx;
+    float: left;
+}
+
+.modle_chexing {
+    font-size: 26rpx;
+    color: #555555;
+    margin-top: 15rpx;
+    padding-left: 25rpx;
+    line-height: 54rpx;
+    width: 470rpx;
+    float: left;
+}
+
+.modle_chexing_btn {
+    background: #f60;
+    width: 146rpx;
+    height: 54rpx;
+    text-align: center;
+    line-height: 54rpx;
+    float: right;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    border-radius: 10rpx;
+}
+
+.modle_price {
+    font-size: 30rpx;
+    color: #F75F5F;
+    margin-top: 35rpx;
+    font-weight: bold;
+    padding-left: 25rpx;
+    width: 470rpx;
+    float: left;
+}

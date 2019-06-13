@@ -1,0 +1,23 @@
+<form bindreset="formReset" bindsubmit="release" reportSubmit="true">
+    <view class="modle">
+    车牌号码
+    <text class="must_red">*</text>
+        <input class="modle_right" name="car_num" placeholder="请输入车牌号码" placeholderStyle="color: #9295A8;" type="text" value="{{info.car_num}}"></input>
+        <picker bindchange="bindPickerChange" class="modle_choose" data-value="{{index}}" range="{{sheng}}">
+        {{mendian}}
+     <image class="modle_choose_img" src="../../image/dingweixjt_btn.png"></image>
+        </picker>
+    </view>
+    <view class="modle">
+    识别代号
+    <text class="must_red">*</text>
+        <input class="modle_right" name="jia" placeholder="请输入识别代号后6位" placeholderStyle="color: #9295A8;" type="text" value="{{info.jia}}"></input>
+    </view>
+    <view class="modle">
+    发动机号
+    <text class="must_red">*</text>
+        <input class="modle_right" name="fa" placeholder="请输入发动机号后6位" placeholderStyle="color: #9295A8;" type="text" value="{{info.fa}}"></input>
+    </view>
+    <button class="bufa_btn" formType="submit" wx:if="{{carid==0}}">添加</button>
+    <button class="bufa_btn" formType="submit" wx:else>修改</button>
+</form>

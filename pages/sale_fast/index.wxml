@@ -1,0 +1,100 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<form bindreset="formReset" bindsubmit="release" reportSubmit="true">
+    <view class="modle">
+    车辆类型
+    <text class="must_red">*</text>
+        <picker bindchange="selectclass" class="modle_right" range="{{classes}}" rangeKey="name" value="{{index}}">
+            <view>
+        {{selectclass}}
+      </view>
+        </picker>
+    </view>
+    <view bindtap="selectbrand" class="modle">
+    车辆品牌
+    <text class="must_red">*</text>
+        <view class="modle_right">
+
+      {{selectbrand}}
+
+    </view>
+    </view>
+    <view class="modle">
+    汽车名称
+    <text class="must_red">*</text>
+        <input class="modle_right" name="carname" placeholder="请输入汽车名称" placeholderStyle="color: #9295A8;" type="text" value="{{defult_value}}"></input>
+    </view>
+    <view class="modle">
+    上牌日期
+    <text class="must_red">*</text>
+        <picker bindchange="bindDateChange" class="modle_right" fields="day" mode="date" start="2000-01-01" value="{{date}}">
+            <view>
+         {{selecttime}}
+      </view>
+        </picker>
+    </view>
+    <view class="modle">
+    公里数(单位万)
+    <text class="must_red">*</text>
+        <input class="modle_right" name="kilometre" placeholder="请输入公里数单位：万" placeholderStyle="color: #9295A8;" style="width:350rpx" type="digit" value="{{defult_value}}"></input>
+    </view>
+    <view class="modle">
+    售价(单位万)
+    <text class="must_red">*</text>
+        <input class="modle_right" name="price" placeholder="请输入转让价格单位：万" placeholderStyle="color: #9295A8;" style="width:350rpx" type="digit" value="{{defult_value}}"></input>
+    </view>
+    <view class="modle">
+    排气量
+    <text class="must_red">*</text>
+        <input class="modle_right" name="exhaust" placeholder="请输入排气量（如：1.6）T" placeholderStyle="color: #9295A8;" style="width:350rpx" value="{{defult_value}}"></input>
+    </view>
+    <view class="modle">
+    变速箱
+    <text class="must_red">*</text>
+        <picker bindchange="gearbox" class="modle_right" mode="selector" range="{{gearboxes}}" rangeKey="name" value="{{index}}">
+            <view>
+        {{gearboxname}}
+      </view>
+        </picker>
+    </view>
+    <view class="modle">
+    联系电话
+    <text class="must_red">*</text>
+        <button bindgetphonenumber="getPhoneNumber" class="modle_btn" openType="getPhoneNumber">电话授权</button>
+        <input class="modle_right" name="phone" placeholder="" placeholderStyle="color: #9295A8;" type="number" value="{{userphone}}"></input>
+    </view>
+    <view class="modle">
+    车辆地址
+      <text class="must_red">*</text>
+        <button bindtap="tomap" class="modle_btn">获取位置</button>
+        <input class="modle_right" disabled="true" name="address" placeholder="" placeholderStyle="color: #9295A8;" style="width:350rpx;" type="text" value="{{mapname&&mapname.length>2?mapname:''}}"></input>
+    </view>
+    <view class="modle" style="border-bottom:0">
+    车辆信息
+    <button bindtap="addcarsimgs" class="modle_btn">添加信息</button>
+    </view>
+    <view wx:for="{{carsimgs}}">
+        <view class="shangchuan_view_border">
+            <view class="shangchuan_view" wx:if="{{item.img!=''}}">
+                <image bindtap="upthiscarsimgs" class="shangchuan_Img_close" data-index="{{index}}" src="/pages/image/tupiangb_btn.png"></image>
+                <image bindtap="showimgs" class="shangchuan_Img" data-index="{{index}}" src="{{item.img}}"></image>
+            </view>
+            <view class="shangchuan_view" wx:if="{{item.img==''}}">
+                <image bindtap="upcarsimgs" class="shangchuan_Img" data-index="{{index}}" src="/pages/image/tianjiantp_btn.png"></image>
+            </view>
+        </view>
+        <view class="car_messageView">
+            <input bindblur="setthisintro" class="car_messageView_input" data-index="{{index}}" placeholder="请输入你的车辆信息" placeholderStyle="color: #9295A8;" type="text" value="{{item.intro}}"></input>
+            <view bindtap="delcarsimgs" class="car_messageView_sc" data-index="{{index}}">删除</view>
+        </view>
+    </view>
+    <button class="bufa_btn" style="background: #333;" wx:if="{{status=='1'}}">已经禁止发布车辆信息</button>
+    <button class="bufa_btn" formType="submit" wx:else>发布</button>
+    <view class="jinggao">发布不真实车源，虚报价格，一经核查将做封号处理。</view>
+</form>
+<import src="/pages/alert/index.wxml"></import>
+<template is="alert" data="{{isShow:isShow}}"></template>
+<button catchtouchmove="viewTouchMove" class="kefu_modle" style="top:{{top}}px">
+    <button bindtap="salefast" class="kuaisu_btn"></button>
+    <image class="kefu_modle_img" src="../image/kefu.png"></image>
+</button>

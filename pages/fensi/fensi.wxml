@@ -1,0 +1,19 @@
+<import src ="/pages/template/header.wxml"/>
+<template is="header" data="{{...headerdata}}"/>
+<view class="modle" wx:if="{{list.length>0}}" wx:for="{{list}}" wx:key="in">
+    <image class="modle_img" src="{{item.head_image}}"></image>
+    <view class="modle_title">{{item.nickname}}</view>
+    <view bindtap="follow" class="modle_btn" data-id="{{item.fans_id}}" data-index="{{index}}" wx:if="{{item.is_follow==2&&type==1}}">关注</view>
+    <view bindtap="follow" class="modle_btn_no" data-id="{{item.fans_id}}" data-index="{{index}}" wx:if="{{item.is_follow==1&&type==1}}">
+        <image class="choose_view_modle_img" src="/pages/image/huxiang.png"></image>
+    </view>
+    <navigator class="choose_view" url="/pages/store/index?uid={{item.fans_id}}">
+        <view class="modle_btn" data-id="{{item.fans_id}}" wx:if="{{type==2}}">店铺</view>
+    </navigator>
+</view>
+<block wx:if="{{list.length<=0}}">
+    <import src="/pages/data_null/index.wxml"></import>
+    <view>
+        <template is="title" data="{{title:'暂无查看数据'}}"></template>
+    </view>
+</block>

@@ -1,0 +1,53 @@
+page {
+    background: #f9f9f9;
+}
+
+.modle {
+    padding: 40rpx 30rpx 35rpx 30rpx;
+    background: #fff;
+}
+
+.modle_title {
+    font-size: 30rpx;
+    color: #333333;
+}
+
+.modle_input_border {
+    width: 100%;
+    height: 100rpx;
+    margin-top: 20rpx;
+    font-size: 50rpx;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 1rpx solid rgba(0,0,0,0.10);
+    line-height: 100rpx;
+}
+
+.modle_input {
+    width: 300rpx;
+    height: 100rpx;
+    float: left;
+    font-weight: normal;
+    margin-left: 10rpx;
+}
+
+.modle_btm_title {
+    font-size: 24rpx;
+    color: #7A7A7A;
+    margin-top: 15rpx;
+}
+
+.btn {
+    height: 80rpx;
+    width: 690rpx;
+    background: #FB9145;
+    margin: 0 auto;
+    margin-top: 50rpx;
+    font-size: 30rpx;
+    color: #FFFFFF;
+    border-radius: 20rpx;
+}
+
+button::after {
+    border: none;
+}

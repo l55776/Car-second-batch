@@ -1,0 +1,196 @@
+page {
+    background: #f9f9f9;
+}
+
+.top_view {
+    width: 708rpx;
+    height: 235rpx;
+    margin-left: 21rpx;
+}
+
+.top_backimg {
+    display: block;
+    width: 708rpx;
+    height: 235rpx;
+}
+
+.top_banner {
+    position: absolute;
+    width: 708rpx;
+    height: 235rpx;
+}
+
+.title_view {
+    position: absolute;
+    top: 45rpx;
+    height: 80rpx;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.title_view_text_view {
+    width: 23%;
+    float: left;
+    height: 100rpx;
+}
+
+.title_view_text_top {
+    color: #333333;
+    font-size: 28rpx;
+    width: 150rpx;
+    text-align: center;
+}
+
+.title_view_text_down {
+    color: #555555;
+    font-size: 20rpx;
+    width: 150rpx;
+    text-align: center;
+}
+
+.jindu_modle {
+    width: 54%;
+    padding-top: 25rpx;
+    height: 75rpx;
+    float: left;
+}
+
+.jindu_modle_tiao {
+    width: 365rpx;
+    height: 6rpx;
+    background: #F0F0F0;
+    border-radius: 200rpx;
+}
+
+.jindu_modle_tiao_shiji {
+    height: 6rpx;
+    border-top-left-radius: 200rpx;
+    border-bottom-left-radius: 200rpx;
+    background: #333333;
+    float: left;
+}
+
+.jindu_modle_tiao_shiji_img {
+    height: 19rpx;
+    width: 19rpx;
+    float: left;
+    display: block;
+    margin-left: -17rpx;
+    margin-top: -5rpx;
+    background: white;
+}
+
+.zhizhen_modle {
+    width: 100%;
+    height: 100rpx;
+    margin-top: 100rpx;
+}
+
+.zhizhen_modle_view {
+    height: 62rpx;
+    width: 170rpx;
+}
+
+.zhizhen_modle_img {
+    position: absolute;
+    height: 62rpx;
+    width: 170rpx;
+}
+
+.zhizhen_modle_text {
+    position: absolute;
+    line-height: 75rpx;
+    height: 62rpx;
+    color: white;
+    text-align: center;
+    font-size: 24rpx;
+    width: 170rpx;
+}
+
+.bottom_border {
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 20rpx;
+    box-shadow: 0 6px 9px 0 rgba(0,0,0,0.10);
+    overflow: hidden;
+    border-radius: 20rpx;
+    border: 1rpx solid #F0F0F0;
+    padding-bottom: 30rpx;
+}
+
+.bottom_border_title {
+    height: 100rpx;
+    width: 94%;
+    margin-left: 3%;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #333333;
+    border-bottom: 1rpx solid #F0F0F0;
+}
+
+.bottom_border_title_view {
+    height: 70rpx;
+    margin-top: 20rpx;
+    width: 94%;
+    margin-left: 3%;
+    line-height: 70rpx;
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.bottom_border_title_view_index {
+    width: 36%;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.bottom_border_title_view_last {
+    width: 25%;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.bottom_border_title_view_last_img {
+    height: 40rpx;
+    width: 40rpx;
+    margin-top: 15rpx;
+    display: block;
+    float: right;
+}
+
+.bottom_border_btn {
+    padding: 0rpx;
+    margin: 0rpx;
+    width: 94%;
+    margin-left: 3%;
+    height: 72rpx;
+    line-height: 72rpx;
+    margin-top: 20rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: white;
+    background: #ff6600;
+    border-radius: 20rpx;
+}
+
+button::after {
+    border: none;
+}
+
+.jieshao_border {
+    padding: 25rpx 30rpx 0 30rpx;
+}
+
+.jieshao_view {
+    font-size: 28rpx;
+    color: #555555;
+    margin-top: 15rpx;
+}

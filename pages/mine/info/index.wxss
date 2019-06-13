@@ -1,0 +1,230 @@
+@import "../../alert/index.wxss";
+
+.xiaoxi {
+    height: 88rpx;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1rpx;
+    display: block;
+    background: #ff6600;
+    border-bottom: 20rpx solid #f9f9f9;
+}
+
+.shop_view_border {
+    width: 100%;
+}
+
+.shop_view {
+    width: 165rpx;
+    height: 165rpx;
+    display: inline-block;
+    margin-left: 30rpx;
+}
+
+.shop_view_img {
+    width: 165rpx;
+    height: 165rpx;
+}
+.xiaoxi_leftImg {
+    padding-right: 15rpx;
+    padding-left: 30rpx;
+    float: left;
+    height: 40rpx;
+    margin-top: 24rpx;
+    width: 40rpx;
+}
+
+.xiaoxi_right_btn {
+    height: 45rpx;
+    width: 100rpx;
+    border: 1px solid #fff;
+    float: left;
+    margin-top: 21.5rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 45rpx;
+    font-size: 24rpx;
+    color: #fff;
+    border-radius: 5rpx;
+}
+
+.update_scroll_modle {
+    width: 505rpx;
+    height: 88rpx;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    color: #FFFFFF;
+}
+
+.modle {
+    width: 90%;
+    margin-left: 5%;
+    height: 88rpx;
+    font-size: 24rpx;
+    color: #333333;
+    line-height: 88rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.modle_right {
+    color: #9295A8;
+    display: block;
+    height: 88rpx;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 385rpx;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    float: right;
+}
+
+.modle_btn {
+    margin: 0;
+    padding: 0;
+    height: 48rpx;
+    width: 120rpx;
+    float: right;
+    margin-top: 21.5rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 46rpx;
+    background: #fff;
+    font-size: 24rpx;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 8rpx;
+}
+
+button::after {
+    border: none;
+}
+
+.shangchuan_view {
+    height: 340rpx;
+    display: inline-block;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.shangchuan_view_index {
+    display: inline-block;
+    width: 90%;
+    border-radius: 100%;
+    margin-left: 5%;
+}
+
+.shangchuan_view_index {
+    height: 150rpx;
+    display: inline-block;
+    margin-left: 20rpx;
+    border-radius: 100%;
+    margin-top: 20rpx;
+    width: 150rpx;
+}
+
+.shangchuan_Img {
+    position: absolute;
+    height: 340rpx;
+}
+
+.shangchuan_logview {
+    height: 165rpx;
+    width: 165rpx;
+    margin-left: 19rpx;
+    display: inline-block;
+    margin-top: 20rpx;
+}
+
+.shangchuan_logImg {
+    position: absolute;
+    height: 165rpx;
+    width: 165rpx;
+}
+
+.shangchuan_Img_close {
+    float: right;
+    height: 340rpx;
+    z-index: 5;
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.bufa_btn {
+    background: #ff6600;
+    border-radius: 15rpx;
+    height: 72rpx;
+    width: 690rpx;
+    margin: 40rpx auto;
+    /* margin-top: 40rpx; */
+    display: block;
+    text-align: center;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    line-height: 72rpx;
+    /* position: absolute;
+    bottom: 50rpx;
+    left: 0;
+    right: 0; */
+}
+
+.jinggao {
+    font-size: 24rpx;
+    color: #9295A8;
+    width: 100%;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+.must_red {
+    color: red;
+}
+
+.modle {
+    width: 90%;
+    margin-left: 5%;
+    height: 88rpx;
+    font-size: 24rpx;
+    color: #333333;
+    line-height: 88rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+
+.modle_right {
+    color: #9295A8;
+    display: block;
+    height: 88rpx;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    float: right;
+}
+
+.modle_btn {
+    margin: 0;
+    padding: 0;
+    height: 48rpx;
+    width: 120rpx;
+    float: right;
+    margin-top: 21.5rpx;
+    margin-left: 30rpx;
+    text-align: center;
+    line-height: 46rpx;
+    background: #fff;
+    font-size: 24rpx;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    border-radius: 8rpx;
+}
+
+button::after {
+    border: none;
+}

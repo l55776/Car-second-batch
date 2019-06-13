@@ -1,0 +1,39 @@
+.header{
+  height: 150rpx;
+  background: #f44b52;
+  line-height: 150rpx;
+}
+
+.header text{
+  position: relative;
+  top: 15rpx;
+  margin-left: 70rpx;
+  color: #fff;
+  font-size: 25rpx;
+}
+
+.item{
+  position: relative;
+  height: 50rpx;
+  padding: 30rpx;
+}
+
+.item .num{
+  color: red;
+  margin: 0 10prx;
+}
+
+.item .time{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 20rpx;
+  margin: 8rpx;
+  line-height: 50px;
+}
+
+.heng{
+  height: 1rpx;
+  margin: 0 10rpx;
+  background: #eee;
+}
